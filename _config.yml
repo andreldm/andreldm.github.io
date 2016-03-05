@@ -1,9 +1,10 @@
 # Site settings
-title: Andre's Random Thoughts
+title: Andre's 2&cent;
 email: andre42m@gmail.com
 description: >
-  Just another blog about programming, hacks and anything else that comes up
-  to a curious and bit mad(who's not?) software devoloper's mind.
+  A blog dedicated toprogramming tricks (mostly JavaScript and Java...),
+  Libraries & Frameworks, software design & architecture, Tools, Linux related
+  things and anything else I find meaningful and useful to share.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://andreldm.com" # the base hostname & protocol for your site
 github_username:  andreldm
