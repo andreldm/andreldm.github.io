@@ -8,6 +8,7 @@
 // Our variables
 $base-font-family: 'Hind', Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
+$title-font-family: 'Bree Serif', serif;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -39,10 +40,18 @@ $on-laptop:        800px;
     }
 }
 
+@mixin transition($options) {
+ -moz-transition: #{$options};
+ -o-transition: #{$options};
+ -webkit-transition: #{$options};
+ transition: #{$options};
+}
+
 
 
 // Custom fonts
 @import url(https://fonts.googleapis.com/css?family=Hind);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
 
 

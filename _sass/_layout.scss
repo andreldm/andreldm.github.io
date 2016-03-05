@@ -86,7 +86,19 @@
 /**
  * Bootstrap customization
  */
+ .main-header {
+   padding: 0px;
+ }
+
 .navbar {
   border-radius: 0;
   margin-bottom: $spacing-unit;
+
+  .navbar-brand {
+    color: $brand-color;
+  }
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: $brand-color;
 }

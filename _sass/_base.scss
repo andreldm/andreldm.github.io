@@ -22,6 +22,9 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font-family;
+}
 
 
 /**
@@ -86,7 +89,8 @@ a {
     }*/
 
     &:hover {
-        color: $text-color;
+        @include transition('all .2s ease-in');
+        color: darken($brand-color, 8%);
         text-decoration: underline;
     }
 }
@@ -165,7 +169,6 @@ pre {
  * Clearfix
  */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
@@ -189,17 +192,9 @@ pre {
             fill: $grey-color;
         }
     }
-}
 
-
-
-/**
- * Navbar
- */
-.nav-item {
-    > a {
-      &:hover {
-          color: $brand-color;
-      }
+    &:hover svg path {
+      @include transition('all .2s ease-in');
+      fill: $brand-color;
     }
 }
