@@ -86,15 +86,19 @@
 /**
  * Bootstrap customization
  */
- .main-header {
-   padding: 0px;
- }
+.main-header {
+ padding: 0px;
+}
 
 .navbar {
   border-radius: 0;
   margin-bottom: $spacing-unit;
 
   .navbar-brand {
+    font-family: "Bree Serif";
+    font-size: 1.5rem;
+    padding: 0px;
+    line-height: 1.25;
     color: $brand-color;
   }
 }
