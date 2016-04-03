@@ -6,10 +6,10 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
     <li>
-      <h1 class="display-4">
+      <h1 class="display-5">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h1>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.categories %} • {{ post.categories|join: ', '|capitalize }}{% endif %}</span>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.categories %} • {{ post.categories|join: ', ' }}{% endif %}</span>
 
       <article class="entry-body">
         {{ post.excerpt }}
