@@ -2,7 +2,7 @@
 layout: post
 title:  "Replacing FLTK Callbacks with Lambdas and Signals"
 date:   2016-04-02 11:46:00
-categories: FLTK C++ lambdas
+tags: FLTK C++ lambdas
 ---
 FLTK is a lightweight GUI toolkit which I use for my [music player](https://github.com/andreldm/kissplayer). It's great due to its simplicity and it can also be statically linked.
 Unfortunately the project development is mostly stalled after two failed attempts to rewrite/redesign it (FLTK 2.x and FLTK 3.x).

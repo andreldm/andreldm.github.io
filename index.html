@@ -9,7 +9,7 @@ layout: default
       <h1 class="display-5">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h1>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.categories %} • {{ post.categories|join: ', ' }}{% endif %}</span>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.tags %} • {{ post.tags|join: ', ' }}{% endif %}</span>
 
       <article class="entry-body">
         {{ post.excerpt }}
