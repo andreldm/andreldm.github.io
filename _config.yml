@@ -16,3 +16,11 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
