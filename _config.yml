@@ -6,7 +6,7 @@ description: >
   Libraries & Frameworks, software design & architecture, Tools, Linux related
   things and anything else I find meaningful and useful to share.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://andreldm.com" # the base hostname & protocol for your site
+url: "https://andreldm.com" # the base hostname & protocol for your site
 github_username:  andreldm
 permalink: /:year/:month/:day/:title.html
 
