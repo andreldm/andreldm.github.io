@@ -141,7 +141,11 @@ By the way, (I hope that) soon we will move our infra to GitLab, so merge reques
 
 ## Conclusion
 
-I didn't know where to tackle this subject, so here it is: do not take the "maintainer" role too seriously, it creates frustration in many ways: someone is trying to figure out how to fix a bug, but that effort seems a waste of time since the maintainer should be much more experienced and able to fix this in the blink of an eye, then people get tired of waiting fixes for old bugs or that fancy feature (*it's an absurd, this bug is from 2008!*), probably the maintainers are lazy or stupid, finally maintainers also get tired and abandon development, after all they have real life issues to handle.
+I didn't know where to tackle this subject, so here it is: maintainers are awesome folks, but don't take this role too seriously, it creates frustration in many ways.
+
+Let me explain: someone is trying to figure out how to fix a bug or introduce a new feature, but may think that effort is a waste of time since the maintainer *should* be much more experienced and able to implement it in the blink of an eye. The bug is not updated for a long time so users get tired of waiting (*it's an absurd, this bug is from 2008!*), probably the maintainers are lazy, stupid or both. It doesn't take long to maintainers also get tired and abandon development for their own reasons. Finally the component is considered unmaintained which reduces the chances of contributions (patches) make their way into releases.
+
+Don't take that as a rant or as "shut up and let's work at our own pace". What I mean is that newcomers are more than welcome to propose solutions and send patches, do not expect a dedicated maintainer for the every component (people come and go). Be proactive, participate, propose, ask, learn, disagree, fix, explain, help and eventually you become a maintainer :)
 
 That's it, I hope this guide covers as much as possible contribution forms as possible, even at the penalty of its length.
 And remember, this is a volunteer-based project not a job, so have fun!
