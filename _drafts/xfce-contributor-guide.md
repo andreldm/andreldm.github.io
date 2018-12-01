@@ -5,8 +5,8 @@ date:   2018-11-30 23:20:00
 tags: Xfce Open-source
 ---
 
-Once in while someone comes around and ask *hey, I love Xfce and would like to contribute, but where do I start? How can I be of use? How to can I implement a fancy new feature?*, of course the answer is 42. Unfortunately there is no such no one-size-fits-all answer, actually to properly give meaningful guidance, a couple of questions should be asked first, e.g. do you have any programming skills? What exactly do you want to improve?
-It's been a long time since I've been planning to write a comprehensive guide, I hope this to be helpful to hitchhikers, I mean new contributors.
+Once in while someone comes around and ask *hey, I love Xfce and would like to contribute, but where do I start? How can I be of use? How can I implement a fancy new feature?*, of course the answer is 42. Kidding, there is no such no one-size-fits-all answer, in fact to properly give meaningful guidance, a couple of questions should be asked first, e.g. do you have any programming skills? What exactly do you want to improve?
+It's been a long time since I've been planning to write a comprehensive guide, I hope this to be helpful to hitchhikers and new contributors.
 As any open source project, there are several ways to collaborate, everyone is welcome to help in any or many ways they are able.
 
 ## Translation
@@ -17,9 +17,11 @@ Xfce uses gettext which generates .po files from source code. You can view those
 
 Fortunately, translators don't need to know terminal commands or any complex tool, since Xfce translations are handled in [Transifex](https://www.transifex.com/xfce/), a web-based translation platform. At that link you can see the overview of the current status of translations.
 
-Once you sign up, you can ask to join the translation team. Be patient, it may take a while to a coordinator to approve your request. If you think your request is taking longer than it should, say a couple weeks, please poke us via the [translation mailing list](https://mail.xfce.org/mailman/listinfo/xfce-i18n) or directly at IRC channel #xfce-dev (more about this later).
+Once you sign up, you can ask to join a translation team. Be patient, it may take a while for a coordinator to approve your request. If you think your request is taking longer than it should, say a couple weeks, please poke us via the [translation mailing list](https://mail.xfce.org/mailman/listinfo/xfce-i18n) or directly at IRC channel #xfce-dev (more about this later).
 
 After joining a team, Transifex should be quite intuitive, there is even a comments section in case of doubts for a particular text to be translated, but developers are not notified, so I recommend to use the mailing list or [bug tracker](https://bugzilla.xfce.org/).
+
+For further details check the documentation [page about translation](https://docs.xfce.org/contribute/translate/start).
 
 ## Donations
 
@@ -38,19 +40,21 @@ Have some Programming/QA/DevOps knowledge? Please, please, please lend a hand to
 
 ## Theming
 
-Are you more into design and maybe CSS is a breeze for you? Good news with gtk3 themes are completely written in CSS, you can even use an preprocessor such as Sass.
+Are you more into design and maybe CSS is a breeze for you? Good news with gtk3 themes are completely written in CSS, you can even use a preprocessor such as Sass.
 Truth must be said, since the introduction of gtk 3.0 (2011, I guess) there were many compatibility breaks, many theme authors got fed up and abandoned their projects.
 
 Fortunately things are more stable since 3.20 (I guess) and our friends of [Project Shimmer](https://shimmerproject.org/) have being doing a amazing job, their theme Greybird is shipped on Xubuntu and the current reference for Xfce. Of course, Xfce is also supposed to look good under Adwaita (gtk's default theme). Oh, until 4.12 Xfce ships several classic themes, unfortunately they had to be [archived](https://git.xfce.org/archive/gtk-xfce-engine/tree/themes) because they need to be rewritten for gtk3.
 
 Finally, as a theme author what are your contribution options? I would say: contribute to Greybird, port/rewrite the classic themes to gtk3, improve Xfce support in other themes out there or roll your own theme!
 
-Since you made this far in this section, perhaps you have web design skills, if so, improvements to our website are also welcome. You may want to file reports for the [www.xfce.org](https://bugzilla.xfce.org/buglist.cgi?component=General&list_id=44458&product=www.xfce.org&resolution=---) project. Just keep in mind that Xfce's philosophy is about mim
+Since you made this far in this section, perhaps you have web design skills, if so, improvements to our website are also welcome. You may want to file reports for the [www.xfce.org](https://bugzilla.xfce.org/buglist.cgi?component=General&list_id=44458&product=www.xfce.org&resolution=---) project. Just keep in mind that Xfce's philosophy is about minimalism.
 
 ## Documentation
 
 Our [wiki](http://wiki.xfce.org/) and [docs](http://docs.xfce.org/) sites contain many helpful pages, but one doesn't need to browse much to notice some have outdated information.
 Do think you can help us with that? Please write a couple of drafts and share them via the [mailing list](https://mail.xfce.org/mailman/listinfo/xfce), we may then give you permissions to edit those pages.
+
+Xfce documentation has some [hints on how to write docs](https://docs.xfce.org/contribute/documentation).
 
 ## Coding
 
@@ -71,7 +75,7 @@ cd xfce4-appfinder
 make
 ```
 
-The `./autogen.sh` command will fail if never build a Xfce component before, we need to have installed development packages for dependencies, unfortunately it's hard to give instructions since package names vary between distributions. In most cases, not panicking and reading the error message helps a lot. For example:
+The `./autogen.sh` command will fail if you never compiled a Xfce component before, we need to have installed development packages for dependencies, unfortunately it's hard to give instructions since package names vary between distributions. In most cases it helps a lot to not panic and read the error message. For example:
 
 ```
 checking for exo-2 >= 0.12.0... not found
@@ -131,7 +135,7 @@ By the way, (I hope that) soon we will move our infra to GitLab, so merge reques
 
 ## Communication
 
-- General user questions? [Xfce's forum](https://forum.xfce.org/) and #xfce at IRC are the best place to get help.
+- General user questions? [Xfce's forum](https://forum.xfce.org/) and #xfce at IRC/Freenode are the best place to get help.
 - Translation stuff? [Xfce-i18n](https://mail.xfce.org/mailman/listinfo/xfce-i18n) mailing list.
 - Stuck with anything related to code? [Xfce4-dev](https://mail.xfce.org/mailman/listinfo/xfce4-dev) mailing list. Besides that #xfce-dev at freenode is where devs hang out. All of us have a real life (I think) and live across different time zones, so once again, be patient and stay online.
 
