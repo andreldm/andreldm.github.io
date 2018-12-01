@@ -7,7 +7,7 @@ tags: Xfce Open-source
 
 Once in while someone comes around and ask *hey, I love Xfce and would like to contribute, but where do I start? How can I be of use? How to can I implement a fancy new feature?*, of course the answer is 42. Unfortunately there is no such no one-size-fits-all answer, actually to properly give meaningful guidance, a couple of questions should be asked first, e.g. do you have any programming skills? What exactly do you want to improve?
 It's been a long time since I've been planning to write a comprehensive guide, I hope this to be helpful to hitchhikers, I mean new contributors.
-As any open source project, there are several ways to collaborate, everyone is welcome to help in any or many ways he/she is able.
+As any open source project, there are several ways to collaborate, everyone is welcome to help in any or many ways they are able.
 
 ## Translation
 
@@ -17,9 +17,9 @@ Xfce uses gettext which generates .po files from source code. You can view those
 
 Fortunately, translators don't need to know terminal commands or any complex tool, since Xfce translations are handled in [Transifex](https://www.transifex.com/xfce/), a web-based translation platform. At that link you can see the overview of the current status of translations.
 
-Once you sign up, you can ask to join the a translation team. Be patient, it may take a while to a coordinator to approve your request. If you think your request is taking longer than it should, say a couple weeks, please poke us via the [translation mailing list](https://mail.xfce.org/mailman/listinfo/xfce-i18n) or directly at IRC channel #xfce-dev (more about this later).
+Once you sign up, you can ask to join the translation team. Be patient, it may take a while to a coordinator to approve your request. If you think your request is taking longer than it should, say a couple weeks, please poke us via the [translation mailing list](https://mail.xfce.org/mailman/listinfo/xfce-i18n) or directly at IRC channel #xfce-dev (more about this later).
 
-After joining a team, transifex should be quite intuitive, there is even a comments section in case of doubts for a particular text to be translated, but developers are not notified, so I recommend to use the mailing list or [bug tracker](https://bugzilla.xfce.org/).
+After joining a team, Transifex should be quite intuitive, there is even a comments section in case of doubts for a particular text to be translated, but developers are not notified, so I recommend to use the mailing list or [bug tracker](https://bugzilla.xfce.org/).
 
 ## Donations
 
@@ -29,23 +29,23 @@ If you have some spare coins to donate, the official way to do so is via [Xfce's
 
 This one could be of your interest if you are an enthusiast eager for new features and not afraid of rough edges.
 Xfce versioning is quite simple, even versions (e.g. 4.12) are stable and odd ones (e.g. 4.13) are development versions.
-Since development cycles are very very long (2~4 years), at some point the development version gets good enough to be used (read "tested") on a daily basis.
-Unsurpisingly developement version users may find regressions (new bugs) and getting reports for them is invaluable to developers, this ensures the stable release will be more solid for more people when it comes out.
+Since development cycles are very long (2~4 years), at some point the development version gets good enough to be used (read "tested") on a daily basis.
+Unsurprisingly development version users may find regressions (new bugs) and getting reports for them is invaluable to developers, this ensures the stable release will be more solid for more people when it comes out.
 
-The [bug tracker](https://bugzilla.xfce.org/) is where those bug reports live. Please try your best to look if a bug has already been reported and please try to be as more descritive as possible, but avoid verbosity. Mozilla has a nice guide on [how to write a bug report](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines).
+The [bug tracker](https://bugzilla.xfce.org/) is where those bug reports live. Please try your best to look if a bug has already been reported and please try to be as more descriptive as possible, but avoid verbosity. Mozilla has a nice guide on [how to write a bug report](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines).
 
 Have some Programming/QA/DevOps knowledge? Please, please, please lend a hand to [xfce-test](https://github.com/schuellerf/xfce-test), we need automated tests really bad.
 
 ## Theming
 
-So you are more into design and maybe CSS is a breeze for you? Good news with gtk3 themes are completely written in CSS, you can even use an preprocessor such as Sass.
-Truth must be said, since the introduction of gtk 3.0 (2011, I guess) there were many compabilitibies breaks, many themers got fed up and abonadonated their projects.
+Are you more into design and maybe CSS is a breeze for you? Good news with gtk3 themes are completely written in CSS, you can even use an preprocessor such as Sass.
+Truth must be said, since the introduction of gtk 3.0 (2011, I guess) there were many compatibility breaks, many theme authors got fed up and abandoned their projects.
 
 Fortunately things are more stable since 3.20 (I guess) and our friends of [Project Shimmer](https://shimmerproject.org/) have being doing a amazing job, their theme Greybird is shipped on Xubuntu and the current reference for Xfce. Of course, Xfce is also supposed to look good under Adwaita (gtk's default theme). Oh, until 4.12 Xfce ships several classic themes, unfortunately they had to be [archived](https://git.xfce.org/archive/gtk-xfce-engine/tree/themes) because they need to be rewritten for gtk3.
 
-Finally, as a themer what are your contribution options? I would say: contribute to Greybird, port/rewrite the classic themes to gtk3, improve Xfce support in other themes out there or roll your own theme!
+Finally, as a theme author what are your contribution options? I would say: contribute to Greybird, port/rewrite the classic themes to gtk3, improve Xfce support in other themes out there or roll your own theme!
 
-Since you made this far in this section, perhaps you have webdesign skills, if so, improvements to our website are also welcome. You may want to file reports for the [www.xfce.org](https://bugzilla.xfce.org/buglist.cgi?component=General&list_id=44458&product=www.xfce.org&resolution=---) project. Just keep in mind that Xfce's philosophy is about mim
+Since you made this far in this section, perhaps you have web design skills, if so, improvements to our website are also welcome. You may want to file reports for the [www.xfce.org](https://bugzilla.xfce.org/buglist.cgi?component=General&list_id=44458&product=www.xfce.org&resolution=---) project. Just keep in mind that Xfce's philosophy is about mim
 
 ## Documentation
 
@@ -54,9 +54,9 @@ Do think you can help us with that? Please write a couple of drafts and share th
 
 ## Coding
 
-This is the most effective way to help, we are always looking for new people to improve, fix, hack and eventually maintain Xfce's components. You don't have to be ninja, just basic knowledge of a programming language, preferably C, a bit of git and most importantly the desire to learn. Speaking of which, some people are scared C, because they heard it's too low level... Fear not, the language is quite simple. Yes, there are pitfalls and gotchas, as any other language, but the experience is improved by gtk's and glib's utility functions and abstractions.
+This is the most effective way to help, we are always looking for new people to improve, fix, hack and eventually maintain Xfce's components. You don't have to be ninja, just basic knowledge of a programming language, preferably C, a bit of git and most importantly the desire to learn. Speaking of which, some people are scared of C, because they heard it's too low level... Fear not, the language is quite simple. Yes, there are pitfalls and gotchas, as any other language, but the experience is improved by gtk's and glib's utility functions and abstractions.
 
-First things first, due Xfce's modular architecture it features several [components](https://xfce.org/projects), some are part of its [core](https://git.xfce.org/xfce) and some are optional [apps](https://git.xfce.org/apps/) or [panel plugins](https://git.xfce.org/panel-plugins/). Take some time to read their description. You might wonder *what the heck is a window manager?* or *I never heard of freedesktop.org or d-bus, are they edible?*. Search for them, I can't possibly explain everything there is to know about Linux desktops in a single blog post.
+First things first, due Xfce's modular architecture feature several [components](https://xfce.org/projects), some are part of its [core](https://git.xfce.org/xfce) and some are optional [apps](https://git.xfce.org/apps/) or [panel plugins](https://git.xfce.org/panel-plugins/). Take some time to read their description. You might wonder *what the heck is a window manager?* or *I never heard of freedesktop.org or d-bus, are they edible?*. Search for them, I can't possibly explain everything there is to know about Linux desktops in a single blog post.
 
 In my opinion the best way to get started with code is to scratch your own itch, you know, deal with that annoying bug or a behavior that could be improved. The rule of thumb is to browse [Xfce's Bugzilla](https://bugzilla.xfce.org/) and look for that bug or report it in case no one noticed this problem until now. Then go to [Xfce's repository browser](https://git.xfce.org/) and clone the repository for the component you are about to hack. That's easy for me to say, isn't it? I'm going to prove you it is not that hard, let's go step by step.
 
@@ -99,13 +99,13 @@ So where do we get started? Have a look that the terminal, it says `g_error_free
 
 As you might have reckoned (or not, no worries), it starts with a bit of state checking, checks if the file still exists, clears a buffer and, the most important part, reloads the file, the result goes into a boolean also called `succeed`. At this point, you may want to use gdb to debug this code, but I won't teach you this, there lots of tutorials out there. The poor's man debug is `printf`, I use it a lot, though some claim it's poor practice. You want to give it try, put `g_print ("succeed is %s\n", result ? "TRUE" : "FALSE");` in a line after `succeed` is assigned (`mousepad-file.c:886`), then build and try to reproduce the bug, the messages on terminal may help you understand what is happening. Ok, indeed `succeed` is `FALSE` at that point, so let's get into `mousepad_file_open`, then read it.
 
-Found anything interesting? No? Go back and check its signature. Still no? What about its return type? Yes, it returns gint which is assigned to a gboolean variable! How is that even possible? If you know a bit C, you probably know that any non-zero number yields `TRUE` when evaluated in boolean expression, obviously `0` yields `FALSE`. If you actually read that function code, you know that it returns non-zero means something went wrong (a common pattern in C programs and libraries). By now it should be clear that this is the opposite of what we expect for `succeed`, 0 is no error which converted to boolean results in `FALSE`. So what is the fix? Well, try to figure it out yourself, you have all the information needed :)
+Found anything interesting? No? Go back and check its signature. Still no? What about its return type? Yes, it returns gint which is assigned to a gboolean variable! How is that even possible? If you know a bit C, you probably know that any non-zero number yields `TRUE` when evaluated in boolean expression, obviously `0` yields `FALSE`. If you read that function code, you know that it returns non-zero means something went wrong (a common pattern in C programs and libraries). By now it should be clear that this is the opposite of what we expect for `succeed`, 0 is no error which converted to boolean results in `FALSE`. So what is the fix? Well, try to figure it out yourself, you have all the information needed :)
 
 Once you have your solution, compare it to the one provided in [Bug #10636](https://bugzilla.xfce.org/show_bug.cgi?id=10636).
 
 #### Sharing Code
 
-Now that you know how to build components and smash bugs, browse Xfce's [bug tracker](https://bugzilla.xfce.org/describecomponents.cgi) and try to fix something that looks easy. If you have a half baked idea on how to fix or some code seems to work but you are not so sure, don't be afraid to ask at #xfce-dev.
+Now that you know how to build components and smash bugs, browse Xfce's [bug tracker](https://bugzilla.xfce.org/describecomponents.cgi) and try to fix something that looks easy. If you have a half-baked idea on how to fix or some code seems to work but you are not so sure, don't be afraid to ask at #xfce-dev.
 Once you have good enough, attach a patch (see `git commit` & `git format-patch`) to the bug report. Wait a few days, if you get no answer, poke us at #xfce-dev or use the Xfce4-dev mailing list.
 After some merged patches, you may ask commit rights and join the dev club, yay!
 
