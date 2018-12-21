@@ -15,7 +15,7 @@ Our translators do an amazing work, most of major languages are constantly updat
 
 Xfce uses gettext which generates .po files from source code. You can view those files from any component repository, for example [Thunar](https://git.xfce.org/xfce/thunar/tree/po).
 
-Fortunately, translators need not know terminal commands or any complex tool, since Xfce translations are handled in [Transifex](https://www.transifex.com/xfce/), a web-based translation platform. At that link you can see the overview of the current status of translations.
+Fortunately, translators need not know terminal commands or any complex tool, since Xfce translations are handled in [Transifex](https://www.transifex.com/xfce/public/), a web-based translation platform. At that link you can see the overview of the current status of translations.
 
 Once you sign up, you can ask to join a translation team. Be patient, it may take a while for a coordinator to approve your request. If you think your request is taking longer than it should, say a couple weeks, please poke us via the [translation mailing list](https://mail.xfce.org/mailman/listinfo/xfce-i18n).
 
