@@ -64,6 +64,8 @@ First things first, Xfce's modular architecture feature several [components](htt
 
 In my opinion the best way to get started with code is to scratch your own itch, you know, deal with that annoying bug or a behavior that could be improved. The rule of thumb is to browse [Xfce's Bugzilla](https://bugzilla.xfce.org/) and look for that bug or report it in case no one noticed the problem until now. Then go to [Xfce's repository browser](https://git.xfce.org/), clone the repository for the component you are about to hack, fix the problem and attach a patch to the bug report. That's easy for me to say, isn't it? I'm going to prove you it is not that hard, let's go step by step.
 
+*Update: this section is now part of [Xfce's Wiki](https://docs.xfce.org/contribute/dev/coding/example).*
+
 #### Building from source
 
 Suppose we are interested in hacking xfce4-appfinder, the first thing we need to do is to build and be able to run that component:
