@@ -58,6 +58,7 @@
 
     h2 {
         font-size: 32px;
+        padding-top: 0.8rem;
 
         @include media-query($on-mobile) {
             font-size: 28px;
