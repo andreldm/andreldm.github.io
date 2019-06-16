@@ -188,6 +188,11 @@ pre {
         height: 32px;
         vertical-align: middle;
 
+        @include media-query($on-mobile) {
+            width: 24px;
+            height: 24px;
+        }
+
         path {
             fill: $grey-color;
         }
