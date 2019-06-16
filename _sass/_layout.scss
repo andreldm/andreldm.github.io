@@ -94,6 +94,7 @@
 
   .icons {
     padding-top: 4px;
+    float: right;
 
     @include media-query($on-mobile) {
       padding-top: 6px;
@@ -124,8 +125,17 @@
       font-size: 1.2rem;
     }
   }
-}
 
-.navbar-nav .nav-item .nav-link:hover {
-  color: $brand-color;
+  .icon {
+    padding-left: 8px;
+  }
+
+  .nav-item {
+    float: inherit;
+    padding-left: 16px;
+
+    .nav-link:hover {
+      color: $brand-color;
+    }
+  }
 }
