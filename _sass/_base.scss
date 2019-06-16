@@ -7,6 +7,9 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+p {
+    margin-top: 0px;
+}
 
 
 /**
@@ -22,8 +25,16 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $title-font-family;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: .5rem;
 }
 
 
@@ -123,7 +134,7 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: transparent;
 }
 
 code {
@@ -141,14 +152,18 @@ pre {
     }
 }
 
+code.highlighter-rouge {
+    color: #ff2160;
+}
+
 
 
 /**
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(1000px - (#{$spacing-unit} * 2));
-    max-width:         calc(1000px - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc(940px - (#{$spacing-unit} * 2));
+    max-width:         calc(940px - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -156,8 +171,8 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-mobile) {
-        max-width: -webkit-calc(800px - (#{$spacing-unit}));
-        max-width:         calc(800px - (#{$spacing-unit}));
+        max-width: -webkit-calc(340px - (#{$spacing-unit}));
+        max-width:         calc(340px - (#{$spacing-unit}));
         padding-right: $spacing-unit / 4;
         padding-left: $spacing-unit / 4;
     }

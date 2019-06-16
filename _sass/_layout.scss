@@ -3,6 +3,7 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
+    color: #818a91;
     padding: 5px 0;
 }
 
@@ -85,57 +86,51 @@
 
 
 /**
- * Bootstrap customization
+ * Site Header
  */
+.site-header {
+  background-color: #373a3c;
+  margin-bottom: 1.8rem;
+}
+
 .navbar {
-  border-radius: 0;
-  padding: 2px 0;
-  margin-bottom: $spacing-unit;
+  display: flex;
+  align-items : center;
+  justify-content: space-between;
+  padding: 3px 0;
 
-  .icons {
-    padding-top: 4px;
-    float: right;
-
-    @include media-query($on-mobile) {
-      padding-top: 6px;
-    }
-
-    .nav-item {
-      line-height: 1.2rem;
-    }
-
-    .separator {
-      padding: 0 4px;
-
-      @include media-query($on-mobile) {
-        padding: 0 2px;
-      }
-    }
+  @include media-query($on-mobile) {
+    padding: 8px 0;
   }
 
-  .navbar-brand {
+  .brand {
     font-family: $brand-font-family;
     font-size: 1.5rem;
-    line-height: 1.25;
-    padding-top: 4px;
     color: $brand-color;
 
     @include media-query($on-mobile) {
-      padding-top: 8px;
       font-size: 1.2rem;
+    }
+
+    &:hover {
+      color: white;
+      text-decoration: none;
     }
   }
 
   .icon {
-    padding-left: 8px;
+    padding-left: 6px;
   }
 
-  .nav-item {
-    float: inherit;
-    padding-left: 16px;
+  .link {
+    line-height: 1rem;
+    padding-left: 12px;
+    color: #9b9d9e;
+    vertical-align: middle;
 
-    .nav-link:hover {
+    &:hover {
       color: $brand-color;
+      text-decoration: none;
     }
   }
 }
