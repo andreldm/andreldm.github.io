@@ -86,19 +86,24 @@
 /**
  * Bootstrap customization
  */
-.main-header {
- padding: 0px;
-}
-
 .navbar {
   border-radius: 0;
+  padding: 2px 0;
   margin-bottom: $spacing-unit;
+
+  .icons {
+    padding-top: 4px;
+
+    .nav-item {
+      line-height: 1.2rem;
+    }
+  }
 
   .navbar-brand {
     font-family: $brand-font-family;
     font-size: 1.5rem;
-    padding: 0px;
     line-height: 1.25;
+    padding-top: 4px;
     color: $brand-color;
   }
 }
