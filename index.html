@@ -7,9 +7,9 @@ layout: default
     {% for post in site.posts %}
     <li>
       <article>
-        <h1>
+        <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h1>
+        </h2>
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.tags %} • {{ post.tags|join: ', ' }}{% endif %}</p>
 
         <p>
