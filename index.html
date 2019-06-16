@@ -6,16 +6,17 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
     <li>
-      <h1 class="display-5">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h1>
-      <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.tags %} • {{ post.tags|join: ', ' }}{% endif %}</p>
+      <article>
+        <h1>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h1>
+        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.tags %} • {{ post.tags|join: ', ' }}{% endif %}</p>
 
-      <article class="entry-body">
-        {{ post.excerpt }}
+        <p>
+          {{ post.excerpt }}
+        <p>
         <p><a href="{{ post.url }}">Read more »</a></p>
       </article>
-
     </li>
     {% endfor %}
   </ul>
