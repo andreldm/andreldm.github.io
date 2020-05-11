@@ -43,7 +43,7 @@ Have some Programming/QA/DevOps knowledge? Please, please, please lend a hand to
 Are you more into design and CSS is a breeze for you? Good news, gtk3 themes are completely written in CSS, you can even use a preprocessor such as Sass.
 Truth must be said, since the introduction of gtk 3.0 (2011, I guess) there were several compatibility breaks, many theme authors got fed up and abandoned their projects. Fortunately things are more stable since 3.20 (I guess).
 
-Our friends of [Project Shimmer](https://shimmerproject.org/) have being doing an amazing job, their theme Greybird is shipped on Xubuntu and is now Xfce's reference theme. Xfce is also supposed to look good under Adwaita (gtk's default theme). By the way, until 4.12 (gtk2) Xfce ships several classic themes, unfortunately they had to be [archived](https://git.xfce.org/archive/gtk-xfce-engine/tree/themes) because they need to be rewritten for gtk3.
+Our friends of [Project Shimmer](https://shimmerproject.org/) have been doing an amazing job, their theme Greybird is shipped on Xubuntu and is now Xfce's reference theme. Xfce is also supposed to look good under Adwaita (gtk's default theme). By the way, until 4.12 (gtk2) Xfce ships several classic themes, unfortunately they had to be [archived](https://git.xfce.org/archive/gtk-xfce-engine/tree/themes) because they need to be rewritten for gtk3.
 
 Finally, as a theme author what are your contribution options? I would say: contribute to Greybird, port/rewrite the classic themes to gtk3, improve Xfce support in other themes out there or roll your own theme!
 
