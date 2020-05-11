@@ -262,6 +262,6 @@ Here is the [PDF]({{ site.url }}/assets/pdf/flying-saucer-handlebars-example.pdf
 You can also find this [project at GitHub](https://github.com/andreldm/flying-saucer-handlebars-example){:target="_blank"} if you're lazy enough to copy and paste ;)
 
 **More resources**
-* [The Flying Saucer User's Guide](http://flyingsaucerproject.github.io/flyingsaucer/r8/guide/users-guide-R8.html){:target="_blank"}
-* [Handlebars.java Tempaltes](http://jknack.github.io/handlebars.java/gettingStarted.html){:target="_blank"}
-* [Handlebars.java Helpers](http://jknack.github.io/handlebars.java/helpers.html){:target="_blank"}
+* [The Flying Saucer User's Guide](https://flyingsaucerproject.github.io/flyingsaucer/r8/guide/users-guide-R8.html){:target="_blank"}
+* [Handlebars.java Tempaltes](https://jknack.github.io/handlebars.java/gettingStarted.html){:target="_blank"}
+* [Handlebars.java Helpers](https://jknack.github.io/handlebars.java/helpers.html){:target="_blank"}

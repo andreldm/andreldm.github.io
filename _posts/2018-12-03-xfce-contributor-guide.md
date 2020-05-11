@@ -13,7 +13,7 @@ As any open source project, there are several ways to collaborate, everyone is w
 
 Our translators do an amazing work, most of major languages are constantly updated, I really appreciate their tirelessly effort. But don't feel unmotivated, there is always room for improvement, especially if you speak any of the not so updated languages.
 
-Xfce uses gettext which generates .po files from source code. You can view those files from any component repository, for example [Thunar](https://git.xfce.org/xfce/thunar/tree/po).
+Xfce uses gettext which generates .po files from source code. You can view those files from any component repository, for example [Thunar](https://gitlab.xfce.org/xfce/thunar/-/tree/master/po).
 
 Fortunately, translators don't need to know terminal commands or any complex tool, since Xfce translations are handled by [Transifex](https://www.transifex.com/xfce/public/), a web-based translation platform. At that link you can see the overview of the current status of translations.
 
@@ -51,7 +51,7 @@ Since you made this far in this section, perhaps you have web design skills, if 
 
 ## Documentation
 
-Our [wiki](http://wiki.xfce.org/) and [docs](http://docs.xfce.org/) sites contain many helpful pages, but one doesn't need to browse much to notice that some have outdated information.
+Our [wiki](https://wiki.xfce.org/) and [docs](https://docs.xfce.org/) sites contain many helpful pages, but one doesn't need to browse much to notice that some have outdated information.
 Think you can help us with that? Please write a draft or two and share them via the [mailing list](https://mail.xfce.org/mailman/listinfo/xfce), we may then give you permissions to edit those pages.
 
 Xfce documentation has some [hints on how to write docs](https://docs.xfce.org/contribute/documentation).
@@ -60,9 +60,9 @@ Xfce documentation has some [hints on how to write docs](https://docs.xfce.org/c
 
 This is the most effective way to help, we are always looking for new people to improve, fix, hack and eventually maintain Xfce's components. You don't have to be a ninja, just the basic knowledge of a programming language, preferably C, a bit of git and most importantly the desire to learn. Some people are scared of C, because they heard it's too low level... Fear not, the language is quite simple. Yes, there are pitfalls and gotchas, as any other language, but the experience is improved by gtk's and glib's utility functions and abstractions.
 
-First things first, Xfce's modular architecture feature several [components](https://xfce.org/projects), some are part of its [core](https://git.xfce.org/xfce) and some are optional [apps](https://git.xfce.org/apps/) or [panel plugins](https://git.xfce.org/panel-plugins/). Take some time to read their description. You might wonder *what the heck is a window manager?* or *I never heard of freedesktop.org or d-bus, are they edible?*. Search for them, I can't possibly explain everything there is to know about Linux desktops in a single blog post.
+First things first, Xfce's modular architecture feature several [components](https://xfce.org/projects), some are part of its [core](https://gitlab.xfce.org/xfce) and some are optional [apps](https://gitlab.xfce.org/apps) or [panel plugins](https://gitlab.xfce.org/panel-plugins). Take some time to read their description. You might wonder *what the heck is a window manager?* or *I never heard of freedesktop.org or d-bus, are they edible?*. Search for them, I can't possibly explain everything there is to know about Linux desktops in a single blog post.
 
-In my opinion the best way to get started with code is to scratch your own itch, you know, deal with that annoying bug or a behavior that could be improved. The rule of thumb is to browse [Xfce's Bugzilla](https://bugzilla.xfce.org/) and look for that bug or report it in case no one noticed the problem until now. Then go to [Xfce's repository browser](https://git.xfce.org/), clone the repository for the component you are about to hack, fix the problem and attach a patch to the bug report. That's easy for me to say, isn't it? I'm going to prove you it is not that hard, let's go step by step.
+In my opinion the best way to get started with code is to scratch your own itch, you know, deal with that annoying bug or a behavior that could be improved. The rule of thumb is to browse [Xfce's Bugzilla](https://bugzilla.xfce.org/) and look for that bug or report it in case no one noticed the problem until now. Then go to [Xfce's gitlab](https://gitlab.xfce.org), clone the repository for the component you are about to hack, fix the problem and attach a patch to the bug report. That's easy for me to say, isn't it? I'm going to prove you it is not that hard, let's go step by step.
 
 *Update: this section is now part of [Xfce's Wiki](https://docs.xfce.org/contribute/dev/coding/example).*
 
@@ -71,7 +71,7 @@ In my opinion the best way to get started with code is to scratch your own itch,
 Suppose we are interested in hacking xfce4-appfinder, the first thing we need to do is to build and be able to run that component:
 
 ```
-git clone git://git.xfce.org/xfce/xfce4-appfinder
+git clone git://gitlab.xfce.org/xfce/xfce4-appfinder
 cd xfce4-appfinder
 ./autogen.sh --prefix=/usr --enable-debug
 make
@@ -96,7 +96,7 @@ This was just a quick summary of how to build Xfce components, the wiki has a mu
 
 #### Smashing bugs
 
-Now to make things interesting let's fix a bug, but this time I need you to clone and build [Mousepad](https://git.xfce.org/apps/mousepad/), Xfce's text editor. The steps are very much the same, except that Mousepad does not run in background which makes things easier. Go on, clone and build it. Hopefully you have successfully built Mousepad by now, if not read carefully error messages spilled on the terminal, if you can't figure them out searching those messages on the web could be helpful. If you tried really hard and nothing worked, ask for guidance at #xfce-dev, stay online and be patient, try one more time if no one replies after one day.
+Now to make things interesting let's fix a bug, but this time I need you to clone and build [Mousepad](https://gitlab.xfce.org/apps/mousepad/), Xfce's text editor. The steps are very much the same, except that Mousepad does not run in background which makes things easier. Go on, clone and build it. Hopefully you have successfully built Mousepad by now, if not read carefully error messages spilled on the terminal, if you can't figure them out searching those messages on the web could be helpful. If you tried really hard and nothing worked, ask for guidance at #xfce-dev, stay online and be patient, try one more time if no one replies after one day.
 
 Now you are able to execute Mousepad with `mousepad/mousepad` from the source folder, we are ready to smash a real bug. Obviously I wouldn't be so reckless to let a bug live just for beginners fix it and never push the fix, the bug I have in mind was fixed centuries ago (2014), actually it was one of my first contributed patches.
 With the magic of git, we can travel back to mousepad-0.3.0 (gtk2!) and smash that bug once again. Before we go back, clean the source folder with `make distclean`, now you are good to run `git checkout mousepad-0.3.0`. Git will complain that "you are in 'detached HEAD' state", you might know what that means, otherwise ignore it for now and remember to learn git later, because you know, having a detached head is not comfortable at all ;)
@@ -127,12 +127,12 @@ By the way, (I hope that) soon we will move our infra to GitLab, so merge reques
 - Offline documentation browser such as [Devhelp](https://wiki.gnome.org/Apps/Devhelp) and [Zeal](https://zealdocs.org/) are faster and more convenient than using a web browser.
 - [Glade](https://glade.gnome.org/) is a [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) interface editor, many Xfce components have their ui created with it.
 - [D-Feet](https://wiki.gnome.org/Apps/DFeet) is useful when dealing with D-Bus.
-- Tricky bugs will need advanced tools to find their cause, in this case [gdb](https://www.gnu.org/software/gdb/) and [valgrind](http://www.valgrind.org/) are good companions.
+- Tricky bugs will need advanced tools to find their cause, in this case [gdb](https://www.gnu.org/software/gdb/) and [valgrind](https://www.valgrind.org/) are good companions.
 - Xorg's utilities, for instance `xev` and `xprop`.
 
 #### Recommended reading
 
-- [How to start contributing to Xfce or any other open source project](http://gezeiten.org/pre-2014/post/2012/11/How-to-start-contributing-to-Xfce-or-any-other-open-source-project)
+- [How to start contributing to Xfce or any other open source project](https://blog.xfce.org/2012/11/)
 - Any decent book about C, there are many free books on the web (although I enjoyed Head First C).
 - [The GLib/GTK+ Development Platform](https://people.gnome.org/~swilmet/glib-gtk-book/)
 - [Pro Git](https://git-scm.com/book/)
