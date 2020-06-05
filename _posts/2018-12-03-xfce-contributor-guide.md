@@ -19,7 +19,7 @@ Fortunately, translators don't need to know terminal commands or any complex too
 
 Once you sign up, you can ask to join a translation team. Be patient, it may take a while for a coordinator to approve your request. If you think your request is taking longer than it should, say a couple weeks, please poke us via the [translation mailing list](https://mail.xfce.org/mailman/listinfo/xfce-i18n).
 
-After joining a team, Transifex should be intuitive, there is even a comments section in case of doubts for a particular text to be translated, but developers are not notified. In this case I recommend using the mailing list or [bug tracker](https://bugzilla.xfce.org/).
+After joining a team, Transifex should be intuitive, there is even a comments section in case of doubts for a particular text to be translated, but developers are not notified. In this case I recommend using the mailing list or reporting issues at [Xfce's Gitlab](https://gitlab.xfce.org/).
 
 For further details check the documentation [page about translations](https://docs.xfce.org/contribute/translate/start).
 
@@ -34,7 +34,7 @@ Xfce versioning is quite simple, even versions (e.g. 4.12) are stable and odd on
 Since development cycles are very long (2~4 years), at some point the development version gets good enough to be used (read "tested") on a daily basis.
 Unsurprisingly development version users may find regressions (new bugs) and getting reports for them is invaluable to developers, this ensures the stable release will be more solid for more people when it comes out.
 
-The [bug tracker](https://bugzilla.xfce.org/) is where those bug reports live. Please try your best to look if a bug has already been reported and please try to be as more descriptive as possible, but avoid verbosity. Mozilla has a nice guide on [how to write a bug report](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines).
+[Xfce's GitLab](https://gitlab.xfce.org/) is where those bug reports live. Please try your best to look if a bug has already been reported and please try to be as more descriptive as possible, but avoid verbosity. Mozilla has a nice guide on [how to write a bug report](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines).
 
 Have some Programming/QA/DevOps knowledge? Please, please, please lend a hand to [xfce-test](https://github.com/schuellerf/xfce-test), we need automated tests really bad.
 
@@ -47,7 +47,7 @@ Our friends of [Project Shimmer](https://shimmerproject.org/) have been doing an
 
 Finally, as a theme author what are your contribution options? I would say: contribute to Greybird, port/rewrite the classic themes to gtk3, improve Xfce support in other themes out there or roll your own theme!
 
-Since you made this far in this section, perhaps you have web design skills, if so, improvements to our website are also welcome. You may want to file reports for the [www.xfce.org](https://bugzilla.xfce.org/buglist.cgi?component=General&list_id=44458&product=www.xfce.org&resolution=---) project. Just keep in mind that Xfce's philosophy is about minimalism.
+Since you made this far in this section, perhaps you have web design skills, if so, improvements to our website are also welcome. You may want to create issues or merge requests for the [www.xfce.org](https://gitlab.xfce.org/www/www.xfce.org) project. Just keep in mind that Xfce's philosophy is about minimalism.
 
 ## Documentation
 
@@ -62,7 +62,7 @@ This is the most effective way to help, we are always looking for new people to 
 
 First things first, Xfce's modular architecture feature several [components](https://xfce.org/projects), some are part of its [core](https://gitlab.xfce.org/xfce) and some are optional [apps](https://gitlab.xfce.org/apps) or [panel plugins](https://gitlab.xfce.org/panel-plugins). Take some time to read their description. You might wonder *what the heck is a window manager?* or *I never heard of freedesktop.org or d-bus, are they edible?*. Search for them, I can't possibly explain everything there is to know about Linux desktops in a single blog post.
 
-In my opinion the best way to get started with code is to scratch your own itch, you know, deal with that annoying bug or a behavior that could be improved. The rule of thumb is to browse [Xfce's Bugzilla](https://bugzilla.xfce.org/) and look for that bug or report it in case no one noticed the problem until now. Then go to [Xfce's gitlab](https://gitlab.xfce.org), clone the repository for the component you are about to hack, fix the problem and attach a patch to the bug report. That's easy for me to say, isn't it? I'm going to prove you it is not that hard, let's go step by step.
+In my opinion the best way to get started with code is to scratch your own itch, you know, deal with that annoying bug or a behavior that could be improved. The rule of thumb is to browse [Xfce's GitLab](https://gitlab.xfce.org/) and look for that bug or report it in case no one noticed the problem until now. Then go to [Xfce's GitLab](https://gitlab.xfce.org), clone the repository for the component you are about to hack, fix the problem and attach a patch to the bug report. That's easy for me to say, isn't it? I'm going to prove you it is not that hard, let's go step by step.
 
 *Update: this section is now part of [Xfce's Wiki](https://docs.xfce.org/contribute/dev/coding/example).*
 
@@ -113,7 +113,7 @@ Once you have your solution, compare it to the one provided in [Bug #10636](http
 
 #### Sharing Code
 
-Now you know how to build components and smash bugs, browse Xfce's [bug tracker](https://bugzilla.xfce.org/describecomponents.cgi) and try to fix something that looks easy. If you have an idea on how to fix or some code that seems to work but you are not so sure, don't be afraid to ask at #xfce-dev.
+Now you know how to build components and smash bugs, take a look at existing issues at [Xfce's GitLab](https://gitlab.xfce.org/) and try to fix something that seems easy. If you have an idea on how to fix or some code that seems to work but you are not so sure, don't be afraid to ask at #xfce-dev.
 Once you have a good enough solution, attach a patch (see `git commit` & `git format-patch`) to the bug report. Wait a few days, if you get no answer, poke us at #xfce-dev or use the Xfce4-dev mailing list.
 After some merged patches, you may [ask commit rights](https://docs.xfce.org/contribute/dev/get-a-contributor-account) and join the dev club, yay!
 
