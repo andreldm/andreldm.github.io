@@ -27,6 +27,8 @@ For further details check the documentation [page about translations](https://do
 
 If you have spare coins to donate, the official way to do so is via [Xfce's bountysource page](https://www.bountysource.com/teams/xfce). You can donate to the organization itself or put a reward of a specific bug. The money is more than welcome, but we are not actively making use, hence I hint donors to place rewards for things they expect (bug fixes, features, etc). Even if you make a hefty donation, we would be very thankful, but this is an open source project 100% run by volunteers, no one is implicitly obliged to act upon your requests.
 
+**Update:** Since we migrated to GitLab and, to the best of our knowledge, Bountysource doesn't support it, placing bounties is not an option anymore. See this [post](https://simon.shimmerproject.org/2020/06/18/why-bountysource-why/) for more details.
+
 ## Bug Reporting / Testing
 
 This one could be of your interest if you are an enthusiast eager for new features and not afraid of rough edges.
