@@ -64,7 +64,7 @@ This is the most effective way to help, we are always looking for new people to 
 
 First things first, Xfce's modular architecture feature several [components](https://xfce.org/projects), some are part of its [core](https://gitlab.xfce.org/xfce) and some are optional [apps](https://gitlab.xfce.org/apps) or [panel plugins](https://gitlab.xfce.org/panel-plugins). Take some time to read their description. You might wonder *what the heck is a window manager?* or *I never heard of freedesktop.org or d-bus, are they edible?*. Search for them, I can't possibly explain everything there is to know about Linux desktops in a single blog post.
 
-In my opinion the best way to get started with code is to scratch your own itch, you know, deal with that annoying bug or a behavior that could be improved. The rule of thumb is to browse [Xfce's GitLab](https://gitlab.xfce.org/) and look for that bug or report it in case no one noticed the problem until now. Then go to [Xfce's GitLab](https://gitlab.xfce.org), clone the repository for the component you are about to hack, fix the problem and attach a patch to the bug report. That's easy for me to say, isn't it? I'm going to prove you it is not that hard, let's go step by step.
+In my opinion the best way to get started with code is to scratch your own itch, you know, deal with that annoying bug or a behavior that could be improved. The rule of thumb is to browse [Xfce's GitLab](https://gitlab.xfce.org/) and look for that bug or report it in case no one noticed the problem until now. Then go to [Xfce's GitLab](https://gitlab.xfce.org), clone the repository for the component you are about to hack, fix the problem and send a merge request. That's easy for me to say, isn't it? I'm going to prove you it is not that hard, let's go step by step.
 
 *Update: this section is now part of [Xfce's Wiki](https://docs.xfce.org/contribute/dev/coding/example).*
 
@@ -100,7 +100,7 @@ This was just a quick summary of how to build Xfce components, the wiki has a mu
 
 Now to make things interesting let's fix a bug, but this time I need you to clone and build [Mousepad](https://gitlab.xfce.org/apps/mousepad/), Xfce's text editor. The steps are very much the same, except that Mousepad does not run in background which makes things easier. Go on, clone and build it. Hopefully you have successfully built Mousepad by now, if not read carefully error messages spilled on the terminal, if you can't figure them out searching those messages on the web could be helpful. If you tried really hard and nothing worked, ask for guidance at #xfce-dev, stay online and be patient, try one more time if no one replies after one day.
 
-Now you are able to execute Mousepad with `mousepad/mousepad` from the source folder, we are ready to smash a real bug. Obviously I wouldn't be so reckless to let a bug live just for beginners fix it and never push the fix, the bug I have in mind was fixed centuries ago (2014), actually it was one of my first contributed patches.
+Now you are able to execute Mousepad with `mousepad/mousepad` from the source folder, we are ready to smash a real bug. Obviously I wouldn't be so reckless to let a bug live just for beginners fix it and never push the fix, the bug I have in mind was fixed centuries ago (2014), actually it was one of my first contributed patches (when merge requests weren't a thing yet).
 With the magic of git, we can travel back to mousepad-0.3.0 (gtk2!) and smash that bug once again. Before we go back, clean the source folder with `make distclean`, now you are good to run `git checkout mousepad-0.3.0`. Git will complain that "you are in 'detached HEAD' state", you might know what that means, otherwise ignore it for now and remember to learn git later, because you know, having a detached head is not comfortable at all ;)
 
 Once again configure and build Mousepad (`./autogen.sh && make`) and fix the bug... Oh, but I haven't even told what is broken :) Allow me: execute Mousepad, type "hello world", save the file somewhere and close Mousepad. Now run Mousepad again and open that file, type some gibberish and choose File -> Revert, it will ask for confirmation, press "Revert" and it says it failed to revert even though it worked. Weird, isn't it?
@@ -116,8 +116,8 @@ Once you have your solution, compare it to the one provided in [Bug #10636](http
 #### Sharing Code
 
 Now you know how to build components and smash bugs, take a look at existing issues at [Xfce's GitLab](https://gitlab.xfce.org/) and try to fix something that seems easy. If you have an idea on how to fix or some code that seems to work but you are not so sure, don't be afraid to ask at #xfce-dev.
-Once you have a good enough solution, attach a patch (see `git commit` & `git format-patch`) to the bug report. Wait a few days, if you get no answer, poke us at #xfce-dev or use the Xfce4-dev mailing list.
-After some merged patches, you may [ask commit rights](https://docs.xfce.org/contribute/dev/get-a-contributor-account) and join the dev club, yay!
+Once you have a good enough solution, follow [these steps](https://docs.xfce.org/contribute/dev/git/start#gitlab_forks_and_merge_requests) in order to create a merge request. Wait a few days, if you get no answer, poke us at #xfce-dev or use the Xfce4-dev mailing list.
+After some merge requests, you may [ask commit rights](https://docs.xfce.org/contribute/dev/get-a-contributor-account) and join the dev club, yay!
 
 By the way, (I hope that) soon we will move our infra to GitLab, so merge requests will be the new standard way to share code, much more convenient IMHO.
 
@@ -149,9 +149,9 @@ By the way, (I hope that) soon we will move our infra to GitLab, so merge reques
 
 I wasn't sure where to tackle this subject, so here it is: maintainers are awesome folks, but don't take this role too seriously, it creates frustration in many ways.
 
-Let me explain: someone is trying to figure out how to fix a bug or introduce a new feature, but may think that effort is a waste of time since the maintainer *should* be much more experienced and able to implement it in the blink of an eye. The bug is not updated for a long time so users get tired of waiting (*it's an absurd, this bug is from 2008!*), probably the maintainers are lazy, stupid or both. It doesn't take long to maintainers also get tired and abandon development for their own reasons. Finally the component is considered unmaintained which greatly reduces the chances of contributions (patches) make their way into releases.
+Let me explain: someone is trying to figure out how to fix a bug or introduce a new feature, but may think that effort is a waste of time since the maintainer *should* be much more experienced and able to implement it in the blink of an eye. The bug is not updated for a long time so users get tired of waiting (*it's an absurd, this bug is from 2008!*), probably the maintainers are lazy, stupid or both. It doesn't take long to maintainers also get tired and abandon development for their own reasons. Finally the component is considered unmaintained which greatly reduces the chances of contributions (merge requests) make their way into releases.
 
-Don't take that as a rant or as "shut up and let's work at our own pace". What I mean is that newcomers are more than welcome to propose solutions and send patches, do not expect a dedicated maintainer for the every component (people come and go). Be proactive, take part, propose, ask, learn, disagree, fix, explain, help and eventually you become a maintainer :)
+Don't take that as a rant or as "shut up and let's work at our own pace". What I mean is that newcomers are more than welcome to propose solutions and send merge requests, do not expect a dedicated maintainer for the every component (people come and go). Be proactive, take part, propose, ask, learn, disagree, fix, explain, help and eventually you become a maintainer :)
 
 That's it, I hope this guide covers as much as possible contribution forms as possible, even at the penalty of its length.
 And remember, this is a volunteer-based project not a job so have fun!
