@@ -115,11 +115,9 @@ Once you have your solution, compare it to the one provided in [Bug #10636](http
 
 #### Sharing Code
 
-Now you know how to build components and smash bugs, take a look at existing issues at [Xfce's GitLab](https://gitlab.xfce.org/) and try to fix something that seems easy. If you have an idea on how to fix or some code that seems to work but you are not so sure, don't be afraid to ask at #xfce-dev.
+Now you know how to build components and smash bugs, take a look at existing issues at [Xfce's GitLab](https://gitlab.xfce.org/) and try to fix something that seems easy. If you have an idea on how to fix some code that seems to work but you are not so sure, don't be afraid to ask at #xfce-dev.
 Once you have a good enough solution, follow [these steps](https://docs.xfce.org/contribute/dev/git/start#gitlab_forks_and_merge_requests) in order to create a merge request. Wait a few days, if you get no answer, poke us at #xfce-dev or use the Xfce4-dev mailing list.
 After some merge requests, you may [ask commit rights](https://docs.xfce.org/contribute/dev/get-a-contributor-account) and join the dev club, yay!
-
-By the way, (I hope that) soon we will move our infra to GitLab, so merge requests will be the new standard way to share code, much more convenient IMHO.
 
 #### Tools
 
