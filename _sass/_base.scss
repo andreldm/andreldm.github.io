@@ -23,6 +23,11 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+
+    @media (prefers-color-scheme: dark) {
+        color: $text-color-dark;
+        background-color: $background-color-dark;
+    }
 }
 
 h1 {
@@ -135,6 +140,10 @@ code {
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: transparent;
+
+    @media (prefers-color-scheme: dark) {
+        border-color: $grey-color-dark;
+    }
 }
 
 code {
@@ -154,6 +163,10 @@ pre {
 
 code.highlighter-rouge {
     color: #ff2160;
+
+    @media (prefers-color-scheme: dark) {
+        color: #a6e22e;
+    }
 }
 
 

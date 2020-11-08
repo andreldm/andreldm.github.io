@@ -3,7 +3,7 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    color: #818a91;
+    color: $grey-color;
     padding: 5px 0;
 }
 
@@ -36,6 +36,10 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+
+    @media (prefers-color-scheme: dark) {
+        color: $grey-color-light;
+    }
 }
 
 .post-link {
