@@ -36,10 +36,6 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
-
-    @media (prefers-color-scheme: dark) {
-        color: $grey-color-light;
-    }
 }
 
 .post-link {
