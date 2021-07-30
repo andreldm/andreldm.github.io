@@ -25,11 +25,20 @@ For further details check the documentation [page about translations](https://do
 
 ## Donations
 
-~~If you have spare coins to donate, the official way to do so is via [Xfce's bountysource page](https://www.bountysource.com/teams/xfce). You can donate to the organization itself or put a reward of a specific bug. The money is more than welcome, but we are not actively making use, hence I hint donors to place rewards for things they expect (bug fixes, features, etc).~~ Even if you make a hefty donation, we would be very thankful, but this is an open source project 100% run by volunteers, no one is implicitly obliged to act upon your requests.
+If you have spare coins to donate, the official way to do so is via Open Collective:
+
+- [Xfce](https://opencollective.com/xfce) - For donations in U.S. Dollars supporting methods such as PayPal, SWIFT transfers and 
+credit cards.
+- [Xfce (EU)](https://opencollective.com/xfce-eu) - For donations in Euros supporting SEPA transfers and credit cards.
+
+Unlike Bountysource, there is no option set rewards for bugs and features, but on the other hand Open Collective seems to be much more professional and transparent, both for us and for the donors.
+You can make one-time or recurring donations. The money is more than welcome, but we are not actively making use of it, it's highly likely that it will be used in hackathons/gatherings or to pay for the project hosting. Even if you make a hefty donation, we would be very thankful, but this is an open source project 100% run by volunteers, no one is implicitly obliged to act upon your requests.
 
 **Update¹:** Since we migrated to GitLab and, to the best of our knowledge, Bountysource doesn't support it, placing bounties is not an option anymore. See this [post](https://simon.shimmerproject.org/2020/06/18/why-bountysource-why/) for more details.
 
-**Update²:** Xfce is moving away from Bountysource, soon we will announce the new donation channel (very likely open colletive).
+**Update²:** Xfce is moving away from Bountysource, soon we will announce the new donation channel (very likely Open Colletive).
+
+**Update³:** Open collective is now Xfce's official donation channel.
 
 ## Bug Reporting / Testing
 
