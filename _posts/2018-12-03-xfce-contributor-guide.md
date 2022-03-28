@@ -84,7 +84,7 @@ In my opinion the best way to get started with code is to scratch your own itch,
 Suppose we are interested in hacking xfce4-appfinder, the first thing we need to do is to build and be able to run that component:
 
 ```
-git clone git://gitlab.xfce.org/xfce/xfce4-appfinder
+git clone https://gitlab.xfce.org/xfce/xfce4-appfinder.git
 cd xfce4-appfinder
 ./autogen.sh --prefix=/usr --enable-debug
 make
