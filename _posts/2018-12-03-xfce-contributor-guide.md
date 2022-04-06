@@ -139,7 +139,7 @@ After some merge requests, you may [ask commit rights](https://docs.xfce.org/con
 - Use whatever text editor/IDE you are comfortable with.
 - The terminal is your friend, get used to it, then you will love it.
 - Now that almost all components are gtk3-based, [GtkInspector](https://wiki.gnome.org/Projects/GTK+/Inspector) is an invaluable tool.
-- Offline documentation browser such as [Devhelp](https://wiki.gnome.org/Apps/Devhelp) and [Zeal](https://zealdocs.org/) are faster and more convenient than using a web browser.
+- Offline documentation browser such as [Devhelp](https://wiki.gnome.org/Apps/Devhelp) is faster and more convenient than using a web browser.
 - [Glade](https://glade.gnome.org/) is a [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) interface editor, many Xfce components have their ui created with it.
 - [D-Feet](https://wiki.gnome.org/Apps/DFeet) is useful when dealing with D-Bus.
 - Tricky bugs will need advanced tools to find their cause, in this case [gdb](https://www.gnu.org/software/gdb/) and [valgrind](https://www.valgrind.org/) are good companions.
