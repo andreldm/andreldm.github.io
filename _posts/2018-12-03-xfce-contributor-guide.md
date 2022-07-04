@@ -149,7 +149,7 @@ After some merge requests, you may [ask commit rights](https://docs.xfce.org/con
 
 - [How to start contributing to Xfce or any other open source project](https://blog.xfce.org/2012/11/)
 - Any decent book about C, there are many free books on the web (although I enjoyed Head First C).
-- [The GLib/GTK+ Development Platform](https://people.gnome.org/~swilmet/glib-gtk-book/)
+- [The GLib/GTK+ Development Platform](https://informatique-libre.be/swilmet/glib-gtk-book/)
 - [Pro Git](https://git-scm.com/book/)
 
 ## Communication
