@@ -38,7 +38,7 @@ Note: Speaking for myself, other devs may disagree, right now (August 2022) I ad
 
 **Update¹:** Since we migrated to GitLab and, to the best of our knowledge, Bountysource doesn't support it, placing bounties is not an option anymore. See this [post](https://simon.shimmerproject.org/2020/06/18/why-bountysource-why/) for more details.
 
-**Update²:** Xfce is moving away from Bountysource, soon we will announce the new donation channel (very likely Open Colletive).
+**Update²:** Xfce is moving away from Bountysource, soon we will announce the new donation channel (very likely Open Collective).
 
 **Update³:** Open collective is now Xfce's official donation channel.
 
@@ -73,7 +73,7 @@ Xfce documentation has some [hints on how to write docs](https://docs.xfce.org/c
 
 ## Coding
 
-This is the most effective way to help, we are always looking for new people to improve, fix, hack and eventually maintain Xfce's components. You don't have to be a ninja, just the basic knowledge of a programming language, preferably C, a bit of git skils and most importantly the desire to learn should be enough to get you started. Some people are scared of C, because they heard it's too low level... Fear not, the language is quite simple. Yes, there are pitfalls and gotchas, as any other language, but the experience is improved by gtk's and glib's utility functions and abstractions.
+This is the most effective way to help, we are always looking for new people to improve, fix, hack and eventually maintain Xfce's components. You don't have to be a ninja, just the basic knowledge of a programming language, preferably C, a bit of git skills and most importantly the desire to learn should be enough to get you started. Some people are scared of C, because they heard it's too low level... Fear not, the language is quite simple. Yes, there are pitfalls and gotchas, as any other language, but the experience is improved by gtk's and glib's utility functions and abstractions.
 
 First things first, Xfce's modular architecture feature several [components](https://xfce.org/projects), some are part of its [core](https://gitlab.xfce.org/xfce) and some are optional [apps](https://gitlab.xfce.org/apps) or [panel plugins](https://gitlab.xfce.org/panel-plugins). Take some time to read their description. You might wonder *what the heck is a window manager?* or *I never heard of freedesktop.org or d-bus, are they edible?*. Search for them, I can't possibly explain everything there is to know about Linux desktops in a single blog post.
 
@@ -116,9 +116,11 @@ Now to make things interesting let's fix a bug, but this time I need you to clon
 Now you are able to execute Mousepad with `mousepad/mousepad` from the source folder, we are ready to smash a real bug. Obviously I wouldn't be so reckless to let a bug live just for beginners fix it and never push the fix, the bug I have in mind was fixed centuries ago (2014), actually it was one of my first contributed patches (when merge requests weren't a thing yet).
 With the magic of git, we can travel back to mousepad-0.3.0 (gtk2!) and smash that bug once again. Before we go back, clean the source folder with `make distclean`, now you are good to run `git checkout mousepad-0.3.0`. Git will complain that "you are in 'detached HEAD' state", you might know what that means, otherwise ignore it for now and remember to learn git later, because you know, having a detached head is not comfortable at all ;)
 
-> Note for time travellers trying to reproduce the steps here:
+> Note for time travelers trying to reproduce the steps here:
 > 
-> Unless you are using Xfce 4.14 or older, you will need to execute `sed -i s/exo-csource/xdt-csource/g mousepad/Makefile.am`. You also need to somehow have installed gtksourceview-2.0, for Arch Linux this is available in AUR as "gtksourceview2".
+> Unless you are using Xfce 4.14 or older, you will need to execute `sed -i s/exo-csource/xdt-csource/g mousepad/Makefile.am`.
+> 
+> You also need to somehow have installed gtksourceview-2.0, for Arch Linux this is available in AUR as "gtksourceview2", for Debian/Ubuntu probably there is a PPA, if not you'll have to build it from source.
 
 Once again configure and build Mousepad (`./autogen.sh && make`) and fix the bug... Oh, but I haven't even told what is broken :) Allow me: execute Mousepad, type "hello world", save the file somewhere and close Mousepad. Now run Mousepad again and open that file, type some gibberish and choose File -> Revert, it will ask for confirmation, press "Revert" and it says it failed to revert even though it worked. Weird, isn't it?
 
@@ -126,7 +128,7 @@ So where do we get started? Have a look at the terminal, it says `g_error_free: 
 
 As you might have reckoned (or not, no worries), it starts with state checking, checks if the file still exists, clears a buffer and, the most important part, reloads the file, the result goes into a boolean also called `succeed`. At this point, you may want to use gdb to debug this code, but I won't teach you this, there are lots of tutorials out there. The poor's man debug is `printf`, I use it a lot, though some claim it's a bad practice. Anyway, try it, put `g_print ("succeed is %s\n", succeed ? "TRUE" : "FALSE");` in the line after `succeed` gets assigned (`mousepad-file.c:886`), then build and try to reproduce the bug, messages on terminal may help you understand what is happening. Ok, indeed `succeed` is `FALSE` at that point, so let's dive into `mousepad_file_open`, then read it.
 
-Found anything interesting? No? Go back and check its signature. Still no? What about its return type? Yes, it returns gint which is assigned to a gboolean variable! How is that even possible? If you know a bit C, you probably know any non-zero number yields `TRUE` when evaluated in a boolean expression, consequently `0` yields `FALSE`. If you read that function code, you saw that it returns non-zero when something went wrong (a common pattern in C programs and libraries). By now it should be clear that this is the opposite of what we expect for `succeed`, 0 means no error but when converted to boolean results in `FALSE`. So what is the fix? Well, try to figure it out yourself, you have all the information needed :)
+Found anything interesting? No? Go back and check its signature. Still no? What about its return type? Yes, it returns gint which is assigned to a gboolean variable! How is that even possible? If you know a bit C, you probably know any non-zero number yields `TRUE` when evaluated in a boolean expression, consequently 0 yields `FALSE`. If you read that function code, you saw that it returns non-zero when something went wrong (a common pattern in C programs and libraries). By now it should be clear that this is the opposite of what we expect for `succeed`, 0 means no error but when converted to boolean results in `FALSE`. So what is the fix? Well, try to figure it out yourself, you have all the information needed :)
 
 Once you have your solution, compare it to the one provided in [Bug #10636](https://bugzilla.xfce.org/show_bug.cgi?id=10636).
 
@@ -166,7 +168,7 @@ I wasn't sure where to tackle this subject, so here it is: maintainers are aweso
 
 Let me explain: someone is trying to figure out how to fix a bug or introduce a new feature, but may think that effort is a waste of time since the maintainer *should* be much more experienced and able to implement it in the blink of an eye. The bug is not updated for a long time so users get tired of waiting (*it's an absurd, this bug is from 2008!*), probably the maintainers are lazy, stupid or both. It doesn't take long to maintainers also get tired and abandon development for their own reasons. Finally the component is considered unmaintained which greatly reduces the chances of contributions (merge requests) make their way into releases.
 
-Don't take that as a rant or as "shut up and let's work at our own pace". What I mean is that newcomers are more than welcome to propose solutions and send merge requests, do not expect a dedicated maintainer for the every component (people come and go). Be proactive, take part, propose, ask, learn, disagree, fix, explain, help and eventually you become a maintainer :)
+Don't take that as a rant or as "shut up and let's work at our own pace". What I mean is that newcomers are more than welcome to propose solutions and send merge requests, just don't expect a dedicated maintainer for the every component (people come and go). Be proactive, take part, propose, ask, learn, disagree, fix, explain, help and eventually you become a maintainer :)
 
-That's it, I hope this guide covers as much as possible contribution forms as possible, even at the penalty of its length.
+That's it, I hope this guide covers as many contribution forms as possible, even at the penalty of its length.
 And remember, this is a volunteer-based project not a job so have fun!
