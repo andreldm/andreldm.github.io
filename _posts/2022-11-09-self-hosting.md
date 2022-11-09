@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My take on self-hosting"
-date:   2022-11-09 00:55:00 CET
+date:   2022-11-09 15:45:00 CET
 tags: self-hosting
 ---
 
