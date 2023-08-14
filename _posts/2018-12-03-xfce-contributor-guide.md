@@ -130,7 +130,7 @@ As you might have reckoned (or not, no worries), it starts with state checking, 
 
 Found anything interesting? No? Go back and check its signature. Still no? What about its return type? Yes, it returns gint which is assigned to a gboolean variable! How is that even possible? If you know a bit C, you probably know any non-zero number yields `TRUE` when evaluated in a boolean expression, consequently 0 yields `FALSE`. If you read that function code, you saw that it returns non-zero when something went wrong (a common pattern in C programs and libraries). By now it should be clear that this is the opposite of what we expect for `succeed`, 0 means no error but when converted to boolean results in `FALSE`. So what is the fix? Well, try to figure it out yourself, you have all the information needed :)
 
-Once you have your solution, compare it to the one provided in [Bug #10636](https://bugzilla.xfce.org/show_bug.cgi?id=10636).
+Once you have your solution, compare it to the actual [fix](https://gitlab.xfce.org/apps/mousepad/-/commit/eb8a943164aa0582c959a4cb7b3c887dc024deaa).
 
 #### Sharing Code
 
