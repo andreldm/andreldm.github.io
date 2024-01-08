@@ -1,8 +1,11 @@
 ---
-layout: post
-title:  "Replacing FLTK Callbacks with Lambdas and Signals"
-date:   2016-04-02 11:46:00
-tags: FLTK C++ lambdas
+date: "2016-04-02T11:46:00Z"
+tags:
+  - FLTK
+  - C++
+  - lambdas
+title: Replacing FLTK Callbacks with Lambdas and Signals
+slug: replacing-fltk-callbacks-lambdas
 ---
 FLTK is a lightweight GUI toolkit which I use for my [music player](https://github.com/andreldm/kissplayer). It's great due to its simplicity and it can also be statically linked.
 Unfortunately the project development is mostly stalled after two failed attempts to rewrite/redesign it (FLTK 2.x and FLTK 3.x).
@@ -11,7 +14,7 @@ Nevertheless, the library is still useful, somewhat maintained and the community
 Not long ago I started refactoring my music player, basically decoupling some of its components, removing globals and
 making use of libsigc++ for signals and C++ 11 Lambdas. Just for comparison, this is the default approach to handle FLTK events with callbacks:
 
-{% highlight c++ %}
+{{< highlight cpp >}}
 #include <FL/Fl.H>
 #include <FL/fl_ask.H>
 #include <FL/Fl_Button.H>
@@ -32,21 +35,21 @@ int main(int argc, char** argv)
 
   return Fl::run();
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Seemingly simple, but doesn't scale well when you have several small callbacks. It gets more awkward when you're using classes.
 Thanks to C++ Lambdas that can be reworked into this:
 
-{% highlight c++ %}
+{{< highlight cpp >}}
 button->callback([](Fl_Widget *w, void *u) {
    fl_alert("Thank you!");
 });
-{% endhighlight %}
+{{< / highlight >}}
 
 Notice that this is a non-capturing lambda. As I wanted to decouple the components using signals, I didn't bother to
 make capturing lambdas work as a Fl_Callback. So here is how things can be handled with Lambdas and Signals:
 
-{% highlight c++ %}
+{{< highlight cpp >}}
 #include <FL/Fl.H>
 #include <FL/fl_ask.H>
 #include <FL/Fl_Box.H>
@@ -101,6 +104,6 @@ int main(int argc, char** argv)
   window->show(0, NULL);
   return Fl::run();
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 That's it, this combination makes possible to decouple the code across other classes and avoid tens or hundred of dangling callbacks.

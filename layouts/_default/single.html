@@ -1,18 +1,16 @@
----
-layout: default
----
+{{ define "main" }}
 <div class="post">
 
   <header class="post-header">
-    <h2 class="post-title">{{ page.title }}</h2>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.tags %} • {{ page.tags|join: ', ' }}{% endif %}</p>
+    <h2 class="post-title">{{ .Title }}</h2>
+    <p class="post-meta">{{ .Date | time.Format ":date_medium" }}{{ if .Params.tags }} • {{ delimit .Params.tags ", " }}{{ end }}</p>
   </header>
 
   <article class="post-content">
-    {{ content }}
+    {{ .Content }}
   </article>
 
-  {% if page.comments and jekyll.environment == "production" %}
+  {{ if (not hugo.IsDevelopment) }}
     <div class="show-comments">
       <button id="show-comments-button" onclick="disqus(); return false;">Show Comments</button>
     </div>
@@ -22,8 +20,8 @@ layout: default
       var disqus_loaded = false;
 
       var disqus_config = function () {
-          this.page.url = 'https://andreldm.com{{ page.url }}';
-          this.page.identifier = '{{ page.id }}';
+          this.page.url = 'https://andreldm.com{{ .RelPermalink }}';
+          this.page.identifier = '{{ .RelPermalink }}';
       };
 
       function disqus() {
@@ -50,6 +48,7 @@ layout: default
         disqus();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-  {% endif %}
-
+  {{ end }}
+  
 </div>
+{{ end }}

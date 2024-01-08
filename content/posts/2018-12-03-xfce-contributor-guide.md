@@ -1,8 +1,10 @@
 ---
-layout: post
-title:  "The Ultimate Contributor's Guide to Xfce"
-date:   2018-12-03 22:20:00
-tags: Xfce Open-source
+date: "2018-12-03T22:20:00Z"
+tags:
+  - Xfce
+  - Open-source
+title: The Ultimate Contributor's Guide to Xfce
+slug: xfce-contributor-guide
 ---
 
 Once in a while someone comes around and ask *hey, I love Xfce and would like to contribute, but where do I start? How can I be of use? How can I implement a fancy new feature?*, I have no doubt the answer is 42. Unfortunately, we don't have a supercomputer (and millions of years) to distill a meaning from that one-size-fits-all answer, therefore to offer proper guidance, some questions should be asked first, e.g. What exactly do you want to improve? Do you have any programming skills? Besides programming, how else would you like to help?

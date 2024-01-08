@@ -1,8 +1,11 @@
 ---
-layout: post
-title:  "Generate PDFs with Flying Saucer + Handlebars.java"
-date:   2017-04-15 23:45:00
-tags: pdf handlebars java
+date: "2017-04-15T23:45:00Z"
+tags:
+  - pdf
+  - handlebars
+  - java
+title: Generate PDFs with Flying Saucer + Handlebars.java
+slug: flying-saucer-handlebars
 ---
 When it comes to generate PDFs using Java the de facto solution is Jasper Reports. Even though it provides a bunch of features and a great set of tools, such as iReport and JasperSoft Studio, the developer might want a simpler and flexible alternative.
 Recently I was involved in a project where I had to craft reports but I felt that using iReport was getting more and more kludgy and messy with lots of subreports. Then I gave Flying Saucer a try and never looked back. For the template engine Handlebars.java was chosen due to its simplicity and my previous experience with Handlebars.js. The combination proved to be awesome!
@@ -13,7 +16,7 @@ In this tutorial we are going to build an application that renders a report of p
 
 First add the dependencies to your project:
 
-{% highlight xml %}
+{{< highlight xml >}}
 <dependency>
   <groupId>org.xhtmlrenderer</groupId>
   <artifactId>flying-saucer-core</artifactId>
@@ -29,19 +32,19 @@ First add the dependencies to your project:
   <artifactId>handlebars</artifactId>
   <version>4.0.6</version>
 </dependency>
-{% endhighlight %}
+{{< / highlight >}}
 
 or gradle if you will:
 
-{% highlight gradle %}
+{{< highlight gradle >}}
   compile 'org.xhtmlrenderer:flying-saucer-core:9.1.5'
   compile 'org.xhtmlrenderer:flying-saucer-pdf:9.1.5'
   compile 'com.github.jknack:handlebars:4.0.6'
-{% endhighlight %}
+{{< / highlight >}}
 
 Now let's create a couple of POJOs:
 
-{% highlight java %}
+{{< highlight java >}}
 public class Customer {
   private Integer id;
   private String name;
@@ -62,11 +65,11 @@ public class Purchase {
 
   // gettters & setters
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Create the `ReportEngine` class to handle the rendering of reports:
 
-{% highlight java %}
+{{< highlight java >}}
 public class ReportEngine {
   private Handlebars handlebars;
 
@@ -110,11 +113,11 @@ public class ReportEngine {
     return fac.newDocumentBuilder();
   }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Handlebars follows the tradition of Mustache, where a template engine should not handle logic. But sometimes that imposes limitations and we end up formatting the input data just to work this around. But don't take me wrong, logic-less template engines are great, because they force us to avoid kludges, ugly hacks and many times keep the business logic away from the presentation layer. So here enters Helpers to keep templates simple, powerful and promote reuse. Here are the ones I used to our example:
 
-{% highlight java %}
+{{< highlight java >}}
 public class HandlebarsHelpers {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
@@ -147,11 +150,11 @@ public class HandlebarsHelpers {
         return NumberFormat.getCurrencyInstance().format(value);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 Then comes the time to write the template using plain HTML and Handlebars:
 
-{% raw %}
+{{< highlight html >}}
 ```handlebars
 <!DOCTYPE html>
 <html>
@@ -233,11 +236,11 @@ Then comes the time to write the template using plain HTML and Handlebars:
 </body>
 </html>
 ```
-{% endraw %}
+{{< / highlight >}}
 
 Finally it's time to put it all together:
 
-{% highlight java %}
+{{< highlight java >}}
 public class App {
     public static void main(String[] args) {
         List<Customer> customers = IntStream
@@ -252,16 +255,16 @@ public class App {
         new ReportEngine().generate("purchases", "report.pdf", data);
     }
 }
-{% endhighlight %}
+{{< / highlight >}}
 
 And this is our nice and tidy report:
-![My helpful screenshot]({{ site.url }}/assets/img/flying-saucer-handlebars-example.png)
+![My helpful screenshot](/assets/img/flying-saucer-handlebars-example.png)
 
-Here is the [PDF]({{ site.url }}/assets/pdf/flying-saucer-handlebars-example.pdf){:target="_blank"}.
+Here is the [PDF](/assets/pdf/flying-saucer-handlebars-example.pdf).
 
-You can also find this [project at GitHub](https://github.com/andreldm/flying-saucer-handlebars-example){:target="_blank"} if you're lazy enough to copy and paste ;)
+You can also find this [project at GitHub](https://github.com/andreldm/flying-saucer-handlebars-example) if you're lazy enough to copy and paste ;)
 
 **More resources**
-* [The Flying Saucer User's Guide](https://flyingsaucerproject.github.io/flyingsaucer/r8/guide/users-guide-R8.html){:target="_blank"}
-* [Handlebars.java Tempaltes](https://jknack.github.io/handlebars.java/gettingStarted.html){:target="_blank"}
-* [Handlebars.java Helpers](https://jknack.github.io/handlebars.java/helpers.html){:target="_blank"}
+* [The Flying Saucer User's Guide](https://flyingsaucerproject.github.io/flyingsaucer/r8/guide/users-guide-R8.html)
+* [Handlebars.java Tempaltes](https://jknack.github.io/handlebars.java/gettingStarted.html)
+* [Handlebars.java Helpers](https://jknack.github.io/handlebars.java/helpers.html)

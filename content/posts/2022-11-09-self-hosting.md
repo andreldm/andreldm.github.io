@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  "My take on self-hosting"
-date:   2022-11-09 09:15:00
-tags: self-hosting
+date: "2022-11-09T09:15:00Z"
+tags:
+  - self-hosting
+title: My take on self-hosting
+slug: self-hosting
 ---
 
 This is a write-up of my experience with self-hosting services. I hope it's useful and encouraging to people that wishes to get started in this art.
@@ -23,7 +24,7 @@ Armed with that motivation, a dusty Raspberry Pi 2 and 64GB SD Card, I set to ad
 
 Once the OS was installed, another decision had to be made, how to manage services. Some people insist in using packages provided by the distribution. I knew this would have limited success, after all, I couldn't depend solely on packagers and AUR. Some people really like to suffer more than necessary and use Kubernetes for home labs. If you have time, multiple boards and motivation to learn Kubernetes, go ahead, it is just not my case. There is also Portainer and Ansible, which I didn't really consider. Finally, I settled on using Docker with compose files. This approach has been serving me well, there are alternatives, there are even distros (e.g. [Umbrel](https://umbrel.com)) which automate the installation and maintenance of services (I'm not talking about packages and systemd services). For now I'm happy with the balance of control, simplicity and maintenance effort.
 
-![Raspberry Picture]({{ site.url }}/assets/img/raspberry.jpg){:style="display: block; margin:auto"}
+![Raspberry Picture](/assets/img/raspberry.jpg)
 
 ## Syncthing
 

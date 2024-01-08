@@ -1,8 +1,10 @@
 ---
-layout: post
-title:  "Hello World"
-date:   2016-02-29 09:32:14
-tags: intro
+comments: false
+date: "2016-02-29T09:32:14Z"
+tags:
+  - intro
+title: Hello World
+slug: hello-world
 comments: false
 ---
 Yay, this is my first post. I hope to write many more about my experiments and hacks

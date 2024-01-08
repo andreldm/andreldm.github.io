@@ -1,0 +1,11 @@
+<li>
+    <article>
+        <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p class="post-meta">{{ .Date | time.Format ":date_medium" }}&nbsp;&bull;&nbsp;{{ delimit .Params.tags ", " }}</p>
+        <p>{{ .Summary }}</p>
+        <p><a href="{{ .RelPermalink }}">Read&nbsp;more&nbsp;&raquo;</a></p>
+        <footer>
+            <a href=''></a>
+        </footer>
+    </article>
+</li>
