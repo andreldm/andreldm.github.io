@@ -12,7 +12,7 @@
 
   {{ if (not hugo.IsDevelopment) }}
     <div class="show-comments">
-      <button id="show-comments-button" onclick="disqus(); return false;">Show Comments</button>
+      <button id="show-comments-button" onclick="disqus(); return false;">Show Comments (from Disqus)</button>
     </div>
 
     <div id="disqus_thread"></div>
@@ -20,8 +20,8 @@
       var disqus_loaded = false;
 
       var disqus_config = function () {
-          this.page.url = 'https://andreldm.com{{ .RelPermalink }}';
-          this.page.identifier = '{{ .RelPermalink }}';
+        this.page.url = 'https://andreldm.com{{ .RelPermalink }}';
+        this.page.identifier = '{{ .RelPermalink }}';
       };
 
       function disqus() {
@@ -31,6 +31,7 @@
         var d = document;
         var s = d.createElement('script');
         s.src = '//andreldm.disqus.com/embed.js';
+        s.onerror = () => alert('Failed to load Disqus embedded script, check your anti-tracking settings and try again.');
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
 
