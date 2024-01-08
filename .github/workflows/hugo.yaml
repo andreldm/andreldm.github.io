@@ -58,8 +58,8 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Make copy of about page so that /about/ works
-        run: mkdir ./public/about && cp ./public/about.html ./public/about/index.html
+      - name: Run post build script
+        run: bash ./post-build.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
