@@ -160,9 +160,9 @@ After some merge requests, you may [ask commit rights](https://docs.xfce.org/con
 
 ## Communication
 
-- General user questions? [Xfce's forum](https://forum.xfce.org/) and #xfce at Libera.chat are the best place to get help.
+- General user questions? [Xfce's forum](https://forum.xfce.org/) and our Matrix channel [#xfce](https://matrix.to/#/#xfce:matrix.org) are the best place to get help.
 - Translation stuff? [Xfce-i18n](https://mail.xfce.org/mailman/listinfo/xfce-i18n) mailing list.
-- Stuck with anything related to code? [Xfce4-dev](https://mail.xfce.org/mailman/listinfo/xfce4-dev) mailing list. Besides that #xfce-dev at Libera.chat is where devs hang out. All of us have a real life (I think) and live across different time zones, so once again, be patient and stay online.
+- Stuck with anything related to code? [Xfce4-dev](https://mail.xfce.org/mailman/listinfo/xfce4-dev) mailing list. Besides that [#xfce-dev](https://matrix.to/#/#xfce-dev:matrix.org) at Matrix.org is where devs hang out. All of us have a real life (I think) and live across different time zones, so once again, be patient and stay online.
 
 ## Conclusion
 
