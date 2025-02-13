@@ -6,6 +6,6 @@
     <title>{{ if .Page.Title }}{{ .Page.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ .Site.Params.Description }}">
 
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
     <link rel="canonical" href="{{ .Permalink }}">
 </head>
