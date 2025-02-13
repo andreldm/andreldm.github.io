@@ -11,5 +11,5 @@ Yay, this is my first post. I hope to write many more about my experiments and h
 while playing with technologies such as programming tricks (mostly JavaScript and Java...),  Libraries & Frameworks, software design & architecture, Tools, Linux related things and anything else I find meaningful and useful to share.
 This is it, I'll be spending some time tweaking, breaking and improving this Jekyll-based blog until some posts come up.
 
-Cheers,<br>
+Cheers,\
 André Miranda
