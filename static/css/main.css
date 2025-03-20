@@ -73,6 +73,24 @@ li>ul, li>p {
 }
 
 /**
+ * Tables
+ */
+table {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: start;
+}
+
+th, td {
+  border: 1px solid gray;
+  padding: 2px 8px;
+}
+
+/**
  * Links
  */
 a {
@@ -277,9 +295,9 @@ pre>code {
 
 .post-content img {
   display: block;
-  margin: auto;
-  margin-bottom: 16px;
+  margin: 32px auto;
   max-width: 100%;
+  border: 1px solid gray;
 }
 
 /**
