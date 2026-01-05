@@ -7,14 +7,14 @@ find . -type d -name "*.html" | while read -r dir; do
     parent_dir=$(dirname "$dir")
     new_filename=$(basename "$dir")
 
-    # Move the index.html file one level up to the parent directory
-    mv "$dir/index.html" "$parent_dir/index.html"
+    # Move the index.html file to a temporary name in the parent directory
+    mv "$dir/index.html" "$parent_dir/index.html.tmp"
 
     # Remove the now-empty original directory
     rmdir "$dir"
 
-    # Rename the moved file to what the folder was named
-    mv "$parent_dir/index.html" "$parent_dir/$new_filename"
+    # Rename the temporary file to what the folder was named
+    mv "$parent_dir/index.html.tmp" "$parent_dir/$new_filename"
 
     echo "Processed $dir/index.html -> $parent_dir/$new_filename"
   fi
