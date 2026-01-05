@@ -1,0 +1,18 @@
+base_url = "https://andreldm.com"
+title = "AndreLDM Blog"
+description = "A blog dedicated to programming tricks (mostly JavaScript and Java...), Libraries & Frameworks, software design & architecture, Tools, Linux related things and anything else I find meaningful and useful to share."
+default_language = "en-us"
+
+compile_sass = false
+build_search_index = false
+generate_sitemap = true
+generate_robots_txt = true
+
+generate_feeds = true
+feed_filenames = ["feed.xml", "feed.xfce.xml"]
+
+[markdown]
+highlight_code = true
+
+[extra]
+github_user_name = "andreldm"

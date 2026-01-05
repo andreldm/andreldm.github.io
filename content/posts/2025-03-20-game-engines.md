@@ -1,12 +1,17 @@
----
-date: "2025-03-20T16:11:00Z"
-tags:
-  - Gamedev
-title: Exploring Game Engines
-slug: game-engines
----
++++
+title = "Exploring Game Engines"
+date = 2025-03-20T16:11:00Z
+path = "2025/03/20/game-engines.html"
+
+[extra]
+tags = [
+  "Gamedev"
+]
++++
 
 About one year ago I tried to create a game that I can summarize as a [Commandos](https://en.wikipedia.org/wiki/Commandos_(series)) but with spaceships. Even though Java is the language I have the most experience with, the game engines I found just didn't click for me. Getting started was brittle, ideas were overflowing, and I was losing time. So, I picked [Phaser](https://phaser.io/), as JavaScript is (was?) the next best thing for me.
+
+<!-- more -->
 
 As I said, in the beginning, ideas for the game were popping up by the second. Phaser was really easy to get up and running. Unfortunately, JavaScript started to annoy me, I dearly missed type safety. If only JS was strongly typed... well, it is, in the form of TypeScript. Switching to TypeScript was easier than I thought. There are a couple of templates out there showing how to use Phaser + TypeScript + Vite. After a couple of weeks, I started hitting some walls. The player movement wasn't working as I wanted. To be honest, I wasn't even sure how it should be. To add insult to injury, I didn't really like TypeScript. My memory is fuzzy, but I recall having issues with interfaces, my Java-based assumptions didn't apply to TypeScript.
 After a while, with my frustration growing and my free time shrinking, I ~~gave up~~ paused this project indefinitely.

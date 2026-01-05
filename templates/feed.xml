@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>{{ config.title }}
+        {%- if term %} - {{ term.name }}
+        {%- elif section.title %} - {{ section.title }}
+        {%- endif -%}
+      </title>
+      <description>{{ config.description }}</description>
+      <link>
+        {%- if section -%} {{ section.permalink | escape_xml | safe }}
+        {%- else -%} {{ config.base_url | escape_xml | safe }}
+        {%- endif -%}
+      </link>
+      <atom:link href="{{ feed_url | safe }}" rel="self" type="application/rss+xml"/>
+      {% if last_updated is defined %}<pubDate>{{ last_updated | date(format="%a, %d %b %Y %H:%M:%S %z") }}</pubDate><lastBuildDate>{{ last_updated | date(format="%a, %d %b %Y %H:%M:%S %z") }}</lastBuildDate>{% endif %}
+      <language>{{ lang }}</language>
+
+      {%- for page in pages %}
+        {% if page.word_count == 0 %}{% continue %}{% endif %} {# A not so elegant way to not list the about page #}
+        {% set permalink = page.permalink | escape_xml | trim_end_matches(pat='/') | safe %}
+        <item>
+            <title>{{ page.title }}</title>
+            <link>{{ permalink }}</link>
+            <pubDate>{{ page.date | date(format="%a, %d %b %Y %H:%M:%S %z") }}</pubDate>
+            <guid isPermaLink="true">{{ permalink }}</guid>
+            {% if page.summary %}
+                <description>{{ page.summary | striptags | escape_xml | safe }}</description>
+            {% endif %}
+            {%- for tag in page.extra.tags %}
+              <category>{{ tag }}</category>
+            {%- endfor %}
+        </item>
+      {%- endfor %}
+    </channel>
+</rss>

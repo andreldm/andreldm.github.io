@@ -1,15 +1,21 @@
----
-date: "2016-04-02T11:46:00Z"
-tags:
-  - FLTK
-  - C++
-  - lambdas
-title: Replacing FLTK Callbacks with Lambdas and Signals
-slug: replacing-fltk-callbacks-lambdas
----
++++
+title = "Replacing FLTK Callbacks with Lambdas and Signals"
+date = 2016-04-02T11:46:00Z
+path = "2016/04/02/replacing-fltk-callbacks-lambdas.html"
+
+[extra]
+tags = [
+  "FLTK",
+  "C++",
+  "lambdas"
+]
++++
+
 FLTK is a lightweight GUI toolkit which I use for my [music player](https://github.com/andreldm/kissplayer). It's great due to its simplicity and it can also be statically linked.
 Unfortunately the project development is mostly stalled after two failed attempts to rewrite/redesign it (FLTK 2.x and FLTK 3.x).
 Nevertheless, the library is still useful, somewhat maintained and the community is also active, so I can still rely on it.
+
+<!-- more -->
 
 Not long ago I started refactoring my music player, basically decoupling some of its components, removing globals and
 making use of libsigc++ for signals and C++ 11 Lambdas. Just for comparison, this is the default approach to handle FLTK events with callbacks:

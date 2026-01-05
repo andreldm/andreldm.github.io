@@ -1,12 +1,17 @@
----
-date: "2022-11-09T09:15:00Z"
-tags:
-  - self-hosting
-title: My take on self-hosting
-slug: self-hosting
----
++++
+title = "My take on self-hosting"
+date = 2022-11-09T09:15:00Z
+path = "2022/11/09/self-hosting.html"
+
+[extra]
+tags = [
+  "self-hosting"
+]
++++
 
 This is a write-up of my experience with self-hosting services. I hope it's useful and encouraging to people that wishes to get started in this art.
+
+<!-- more -->
 
 ## Motivation
 

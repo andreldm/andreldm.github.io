@@ -1,14 +1,20 @@
----
-date: "2017-04-15T23:45:00Z"
-tags:
-  - pdf
-  - handlebars
-  - java
-title: Generate PDFs with Flying Saucer + Handlebars.java
-slug: flying-saucer-handlebars
----
++++
+title = "Generate PDFs with Flying Saucer + Handlebars.java"
+date = 2017-04-15T23:45:00Z
+path = "2017/04/15/flying-saucer-handlebars.html"
+
+[extra]
+tags = [
+  "pdf",
+  "handlebars",
+  "java"
+]
++++
+
 When it comes to generate PDFs using Java the de facto solution is Jasper Reports. Even though it provides a bunch of features and a great set of tools, such as iReport and JasperSoft Studio, the developer might want a simpler and flexible alternative.
 Recently I was involved in a project where I had to craft reports but I felt that using iReport was getting more and more kludgy and messy with lots of subreports. Then I gave Flying Saucer a try and never looked back. For the template engine Handlebars.java was chosen due to its simplicity and my previous experience with Handlebars.js. The combination proved to be awesome!
+
+<!-- more -->
 
 In this tutorial we are going to build an application that renders a report of purchases by customers to illustrate how simple and powerful is the Flying Saucer and Handlerbars.java combo.
 

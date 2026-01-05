@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{%- block content %}
+<div class="post">
+  <header class="post-header">
+    <h2 class="post-title">{{ page.title }}</h2>
+  </header>
+
+  <article class="post-content">
+    {{ config.description | safe }}
+  </article>
+</div>
+{% endblock content %}

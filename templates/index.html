@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="home">
+    <ul class="post-list">
+      {% for page in section.pages %}
+        {% if page.word_count == 0 %}{% continue %}{% endif %} {# A not so elegant way to not list the about page #}
+        {% set permalink = page.permalink | trim_end_matches(pat='/') | safe %}
+        <li>
+          <article>
+            <h2><a class="post-link" href="{{ permalink }}">{{ page.title }}</a></h2>
+            <p class="post-meta">{{ page.date | date(format="%F") }}&nbsp;&bull;&nbsp;{{ page.extra.tags | join(sep=", ") }}</p>
+            <p>{{ page.summary | safe  }}</p>
+            <p><a href="{{ permalink }}">Read&nbsp;more&nbsp;&raquo;</a></p>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock content %}
