@@ -47,6 +47,8 @@ jobs:
           zola build \
             --minify \
             --base-url "${{ steps.pages.outputs.base_url }}/"
+      - name: Run post build script
+        run: bash ./post-build.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
