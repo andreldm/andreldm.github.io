@@ -43,7 +43,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with Zola
-        env:
         run: |
           zola build \
             --minify \
