@@ -21,7 +21,7 @@ Our translators do an amazing work, most of major languages are constantly updat
 
 Xfce uses gettext which generates .po files from source code. You can view those files from any component repository, for example [Thunar](https://gitlab.xfce.org/xfce/thunar/-/tree/master/po).
 
-Fortunately, translators don't need to know terminal commands or any complex tool, since Xfce translations are handled by [Transifex](https://www.transifex.com/xfce/public/), a web-based translation platform. At that link you can see the overview of the current status of translations.
+Fortunately, translators don't need to know terminal commands or any complex tool, since Xfce translations are handled by [Transifex](https://explore.transifex.com/xfce/), a web-based translation platform. At that link you can see the overview of the current status of translations.
 
 Once you sign up, you can ask to join a translation team. Be patient, it may take a while for a coordinator to approve your request. If you think your request is taking longer than it should, say a couple weeks, please poke us via the [translation mailing list](https://mail.xfce.org/mailman/listinfo/xfce-i18n).
 
@@ -148,7 +148,7 @@ After some merge requests, you may [ask commit rights](https://docs.xfce.org/con
 
 - Use whatever text editor/IDE you are comfortable with.
 - The terminal is your friend, get used to it, then you will love it.
-- Now that almost all components are gtk3-based, [GtkInspector](https://wiki.gnome.org/Projects/GTK+/Inspector) is an invaluable tool.
+- Now that almost all components are gtk3-based, [GtkInspector](https://developer.gnome.org/documentation/tools/inspector.html) is an invaluable tool.
 - Offline documentation browser such as [Devhelp](https://wiki.gnome.org/Apps/Devhelp) is faster and more convenient than using a web browser.
 - [Glade](https://glade.gnome.org/) is a [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) interface editor, many Xfce components have their ui created with it.
 - [D-Feet](https://wiki.gnome.org/Apps/DFeet) is useful when dealing with D-Bus.
@@ -159,7 +159,7 @@ After some merge requests, you may [ask commit rights](https://docs.xfce.org/con
 
 - [How to start contributing to Xfce or any other open source project](https://blog.xfce.org/2012/11/)
 - Any decent book about C, there are many free books on the web (although I enjoyed Head First C).
-- [The GLib/GTK+ Development Platform](https://informatique-libre.be/swilmet/glib-gtk-book/)
+- [The GLib/GTK+ Development Platform](https://github.com/gdev-technology/glib-gtk-learning)
 - [Pro Git](https://git-scm.com/book/)
 
 ## Communication
