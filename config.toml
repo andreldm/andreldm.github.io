@@ -13,6 +13,7 @@ feed_filenames = ["feed.xml", "feed.xfce.xml"]
 
 [markdown]
 highlight_code = true
+highlight_theme = "visual-studio-dark"
 
 [extra]
 github_user_name = "andreldm"

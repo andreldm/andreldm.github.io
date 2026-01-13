@@ -127,13 +127,12 @@ blockquote> :last-child {
  * Code formatting
  */
 pre, code {
-  font-size: 15px;
+  font-size: 13px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
-  background-color: transparent;
 }
 
-code {
+:not(pre)>code {
   padding: 1px 5px;
   color: #ff2160;
 }
@@ -143,7 +142,7 @@ code {
     border-color: #424242;
   }
 
-  code {
+  :not(pre)>code {
     color: #a6e22e;
   }
 }
@@ -151,15 +150,13 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
-  background-color: #fff !important;
+  background-color: #333 !important;
 }
 
 pre>code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
-  color: #111;
-  background-color: transparent;
 }
 
 /**

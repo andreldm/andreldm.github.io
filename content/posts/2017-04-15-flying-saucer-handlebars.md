@@ -22,7 +22,7 @@ In this tutorial we are going to build an application that renders a report of p
 
 First add the dependencies to your project:
 
-{{< highlight xml >}}
+```xml
 <dependency>
   <groupId>org.xhtmlrenderer</groupId>
   <artifactId>flying-saucer-core</artifactId>
@@ -38,19 +38,19 @@ First add the dependencies to your project:
   <artifactId>handlebars</artifactId>
   <version>4.0.6</version>
 </dependency>
-{{< / highlight >}}
+```
 
 or gradle if you will:
 
-{{< highlight gradle >}}
+```groovy
   compile 'org.xhtmlrenderer:flying-saucer-core:9.1.5'
   compile 'org.xhtmlrenderer:flying-saucer-pdf:9.1.5'
   compile 'com.github.jknack:handlebars:4.0.6'
-{{< / highlight >}}
+```
 
 Now let's create a couple of POJOs:
 
-{{< highlight java >}}
+```java
 public class Customer {
   private Integer id;
   private String name;
@@ -71,11 +71,11 @@ public class Purchase {
 
   // gettters & setters
 }
-{{< / highlight >}}
+```
 
 Create the `ReportEngine` class to handle the rendering of reports:
 
-{{< highlight java >}}
+```java
 public class ReportEngine {
   private Handlebars handlebars;
 
@@ -119,11 +119,11 @@ public class ReportEngine {
     return fac.newDocumentBuilder();
   }
 }
-{{< / highlight >}}
+```
 
 Handlebars follows the tradition of Mustache, where a template engine should not handle logic. But sometimes that imposes limitations and we end up formatting the input data just to work this around. But don't take me wrong, logic-less template engines are great, because they force us to avoid kludges, ugly hacks and many times keep the business logic away from the presentation layer. So here enters Helpers to keep templates simple, powerful and promote reuse. Here are the ones I used to our example:
 
-{{< highlight java >}}
+```java
 public class HandlebarsHelpers {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
@@ -156,11 +156,10 @@ public class HandlebarsHelpers {
         return NumberFormat.getCurrencyInstance().format(value);
     }
 }
-{{< / highlight >}}
+```
 
 Then comes the time to write the template using plain HTML and Handlebars:
 
-{{< highlight html >}}
 ```handlebars
 <!DOCTYPE html>
 <html>
@@ -242,11 +241,10 @@ Then comes the time to write the template using plain HTML and Handlebars:
 </body>
 </html>
 ```
-{{< / highlight >}}
 
 Finally it's time to put it all together:
 
-{{< highlight java >}}
+```java
 public class App {
     public static void main(String[] args) {
         List<Customer> customers = IntStream
@@ -261,7 +259,7 @@ public class App {
         new ReportEngine().generate("purchases", "report.pdf", data);
     }
 }
-{{< / highlight >}}
+```
 
 And this is our nice and tidy report:
 ![My helpful screenshot](/assets/img/flying-saucer-handlebars-example.png)

@@ -20,7 +20,7 @@ Nevertheless, the library is still useful, somewhat maintained and the community
 Not long ago I started refactoring my music player, basically decoupling some of its components, removing globals and
 making use of libsigc++ for signals and C++ 11 Lambdas. Just for comparison, this is the default approach to handle FLTK events with callbacks:
 
-{{< highlight cpp >}}
+```cpp
 #include <FL/Fl.H>
 #include <FL/fl_ask.H>
 #include <FL/Fl_Button.H>
@@ -41,21 +41,21 @@ int main(int argc, char** argv)
 
   return Fl::run();
 }
-{{< / highlight >}}
+```
 
 Seemingly simple, but doesn't scale well when you have several small callbacks. It gets more awkward when you're using classes.
 Thanks to C++ Lambdas that can be reworked into this:
 
-{{< highlight cpp >}}
+```cpp
 button->callback([](Fl_Widget *w, void *u) {
    fl_alert("Thank you!");
 });
-{{< / highlight >}}
+```
 
 Notice that this is a non-capturing lambda. As I wanted to decouple the components using signals, I didn't bother to
 make capturing lambdas work as a Fl_Callback. So here is how things can be handled with Lambdas and Signals:
 
-{{< highlight cpp >}}
+```cpp
 #include <FL/Fl.H>
 #include <FL/fl_ask.H>
 #include <FL/Fl_Box.H>
@@ -110,6 +110,6 @@ int main(int argc, char** argv)
   window->show(0, NULL);
   return Fl::run();
 }
-{{< / highlight >}}
+```
 
 That's it, this combination makes possible to decouple the code across other classes and avoid tens or hundred of dangling callbacks.

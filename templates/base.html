@@ -9,7 +9,6 @@
       <meta name="description" content="{{ config.description }}">
 
       <link rel="stylesheet" href="{{ get_url(path="css/main.css") }}">
-        <!--FIXME: permalink missing for posts -->
       <link rel="canonical" href="{% if page.permalink %}{{ page.permalink | trim_end_matches(pat='/') | safe }}{% elif section.permalink %}{{ section.permalink | trim_end_matches(pat='/') | safe }}{% endif %}">
   </head>
 
