@@ -10,7 +10,7 @@
           <article>
             <h2><a class="post-link" href="{{ permalink }}">{{ page.title }}</a></h2>
             <p class="post-meta">{{ page.date | date(format="%F") }}&nbsp;&bull;&nbsp;{{ page.extra.tags | join(sep=", ") }}</p>
-            <p>{{ page.summary | safe  }}</p>
+            {{ page.summary | safe }}
             <p><a href="{{ permalink }}">Read&nbsp;more&nbsp;&raquo;</a></p>
           </article>
         </li>

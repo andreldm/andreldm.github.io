@@ -3,7 +3,7 @@
 {%- block content %}
   <div class="post">
     <header class="post-header">
-      <h2 class="post-title">{{ page.title }}</h2>
+      <h1 class="post-title">{{ page.title }}</h1>
       <p class="post-meta">
         {% if page.date %} {{ page.date | date(format="%F") }} {% endif %}
         {% if page.extra.tags %} • {{ page.extra.tags | join(sep=", ") }} {% endif %}</p>
