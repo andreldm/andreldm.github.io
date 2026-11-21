@@ -8,12 +8,15 @@ build_search_index = false
 generate_sitemap = true
 generate_robots_txt = true
 
+# Zola 0.23+ runs Tera on Markdown content; some posts contain {{ }} in code samples
+skip_content_templating = ["**/*.md"]
+
 generate_feeds = true
 feed_filenames = ["feed.xml", "feed.xfce.xml"]
 
-[markdown]
-highlight_code = true
-highlight_theme = "visual-studio-dark"
+[markdown.highlighting]
+theme = "dark-plus"
+error_on_missing_language = true
 
 [extra]
 github_user_name = "andreldm"

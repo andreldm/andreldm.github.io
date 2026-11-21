@@ -3,7 +3,7 @@
     <channel>
       <title>{{ config.title }}
         {%- if term %} - {{ term.name }}
-        {%- elif section.title %} - {{ section.title }}
+        {%- elif section?.title %} - {{ section.title }}
         {%- endif -%}
       </title>
       <description>{{ config.description }}</description>
@@ -17,8 +17,8 @@
       <language>{{ lang }}</language>
 
       {%- for page in pages %}
-        {% if not page.extra or page.extra.tags is not containing("Xfce") %}{% continue %}{% endif %}
-        {% set permalink = page.permalink | escape_xml | trim_end_matches(pat='/') | safe %}
+        {% if "Xfce" not in (page.extra.tags or []) %}{% continue %}{% endif %}
+        {% set permalink = page.permalink | escape_xml | trim_end(pat='/') | safe %}
         <item>
             <title>{{ page.title }}</title>
             <link>{{ permalink }}</link>

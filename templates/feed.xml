@@ -3,7 +3,7 @@
     <channel>
       <title>{{ config.title }}
         {%- if term %} - {{ term.name }}
-        {%- elif section.title %} - {{ section.title }}
+        {%- elif section?.title %} - {{ section.title }}
         {%- endif -%}
       </title>
       <description>{{ config.description }}</description>
@@ -18,7 +18,7 @@
 
       {%- for page in pages %}
         {% if page.word_count == 0 %}{% continue %}{% endif %} {# A not so elegant way to not list the about page #}
-        {% set permalink = page.permalink | escape_xml | trim_end_matches(pat='/') | safe %}
+        {% set permalink = page.permalink | escape_xml | trim_end(pat='/') | safe %}
         <item>
             <title>{{ page.title }}</title>
             <link>{{ permalink }}</link>

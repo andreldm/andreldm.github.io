@@ -5,11 +5,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-      <title>{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
+      <title>{{ page?.title or config.title }}</title>
       <meta name="description" content="{{ config.description }}">
 
       <link rel="stylesheet" href="{{ get_url(path="css/main.css") }}">
-      <link rel="canonical" href="{% if page.permalink %}{{ page.permalink | trim_end_matches(pat='/') | safe }}{% elif section.permalink %}{{ section.permalink | trim_end_matches(pat='/') | safe }}{% endif %}">
+      <link rel="canonical" href="{% if page?.permalink %}{{ page.permalink | trim_end(pat='/') | safe }}{% elif section?.permalink %}{{ section.permalink | trim_end(pat='/') | safe }}{% endif %}">
   </head>
 
   <body>

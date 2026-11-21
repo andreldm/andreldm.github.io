@@ -170,6 +170,14 @@ pre > code {
   font-size: inherit;
 }
 
+/* Required by Zola's syntax highlighter (Giallo): one span per line */
+.giallo-l {
+  display: inline-block;
+  min-height: 1lh;
+  width: 100%;
+  vertical-align: top; /* keeps empty lines from growing taller */
+}
+
 /**
  * Layout
  */

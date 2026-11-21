@@ -23,8 +23,8 @@
         var disqus_loaded = false;
 
         var disqus_config = function () {
-          this.page.url = 'https://andreldm.com{{ page.path | trim_end_matches(pat='/') | safe }}';
-          this.page.identifier = '{{ page.path | trim_end_matches(pat='/') | safe }}';
+          this.page.url = 'https://andreldm.com{{ page.path | trim_end(pat='/') | safe }}';
+          this.page.identifier = '{{ page.path | trim_end(pat='/') | safe }}';
         };
 
         function disqus() {
